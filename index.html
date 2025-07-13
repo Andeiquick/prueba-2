@@ -29,8 +29,8 @@
       <div class="slide active">
         <img src=" https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1600&q=80" alt="Banner 1">
         <div class="slide-text">
-          <h1>Tu sonrisa nos inspira</h1>
-          <p>Brindamos atención integral con tecnología avanzada.</p>
+          <h1>Tu sonrisa perfecta empieza aquí</h1>
+          <p>Atención personalizada, tecnología avanzada y resultados naturales.</p>
           <a href="#contacto" class="btn-cta">Agenda tu cita ahora</a>
         </div>
       </div>
@@ -38,7 +38,7 @@
         <img src=" https://images.unsplash.com/photo-1586825072582-8e4c65b2b29f?auto=format&fit=crop&w=1600&q=80" alt="Banner 2">
         <div class="slide-text">
           <h1>Diseña tu nueva sonrisa</h1>
-          <p>Blanqueamiento, implantes, ortodoncia y más.</p>
+          <p>Blanqueamiento, implantes, ortodoncia y más. ¡Todo en un solo lugar!</p>
           <a href="#servicios" class="btn-cta">Ver servicios</a>
         </div>
       </div>
@@ -70,16 +70,30 @@
     </div>
   </section>
 
-  <!-- Testimonios -->
+  <!-- Testimonios con slider -->
   <section id="testimonios" class="testimonials">
     <h2>Lo que dicen nuestros pacientes</h2>
-    <div class="testimonial-box">
-      <p>"Excelente servicio. Me sentí muy cómoda y el resultado fue increíble."</p>
-      <strong>- María S.</strong>
-    </div>
-    <div class="testimonial-box">
-      <p>"La mejor experiencia dental que he tenido. Muy profesionales y amables."</p>
-      <strong>- Carlos R.</strong>
+    <div class="testimonial-slider">
+      <button class="testi-prev" onclick="prevTestimonial()">❮</button>
+      <div class="testimonial-container">
+        <div class="testimonial active">
+          <p>"Me encantó la atención recibida. El trato fue muy cercano y me explicaron todo al detalle. ¡Mi sonrisa nunca se vio mejor!"</p>
+          <strong>- Laura M., Madrid</strong>
+        </div>
+        <div class="testimonial">
+          <p>"Después de años buscando una solución para mis dientes, encontré SmileCare. Fue la mejor decisión que pude tomar."</p>
+          <strong>- Andrés R., Barcelona</strong>
+        </div>
+        <div class="testimonial">
+          <p>"Trato humano, profesionalismo y excelentes instalaciones. Me sentí seguro desde el primer momento."</p>
+          <strong>- Sofía G., Valencia</strong>
+        </div>
+        <div class="testimonial">
+          <p>"El proceso de blanqueamiento fue rápido y sin molestias. ¡Quedé encantada con el resultado!"</p>
+          <strong>- Clara D., Sevilla</strong>
+        </div>
+      </div>
+      <button class="testi-next" onclick="nextTestimonial()">❯</button>
     </div>
   </section>
 
