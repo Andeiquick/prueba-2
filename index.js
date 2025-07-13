@@ -1,45 +1,98 @@
-// Menú responsive
-function toggleMenu() {
-  const menu = document.getElementById("menu");
-  menu.classList.toggle("active");
-}
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // --- Lógica del Menú Hamburguesa ---
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    // Evento para mostrar/ocultar el menú móvil
+    hamburgerButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
 
-// Slider de servicios
-let currentService = 0;
+    // --- Lógica de Sliders Reutilizable ---
+    /**
+     * Crea y controla un carrusel de imágenes o contenido.
+     * @param {string} sliderId - El ID del contenedor principal del slider.
+     * @param {string} slideClass - La clase CSS que identifica cada slide.
+     * @param {number} [autoSlideInterval=5000] - El intervalo en ms para el cambio automático. 0 para deshabilitar.
+     */
+    function createSlider(sliderId, slideClass, autoSlideInterval = 5000) {
+        const slider = document.getElementById(sliderId);
+        if (!slider) {
+            console.error(`Slider con ID "${sliderId}" no encontrado.`);
+            return;
+        }
 
-function moveService(step) {
-  const slides = document.querySelector('.service-slider');
-  const totalSlides = slides.children.length;
+        const slides = slider.querySelectorAll(`.${slideClass}`);
+        const prevButton = slider.querySelector('.slider-prev');
+        const nextButton = slider.querySelector('.slider-next');
+        let currentIndex = 0;
+        let intervalId = null;
 
-  currentService += step;
+        // Muestra el slide correspondiente al índice y oculta los demás
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('hidden', i !== index);
+            });
+        }
 
-  if (currentService >= totalSlides) currentService = 0;
-  if (currentService < 0) currentService = totalSlides - 1;
+        // Avanza al siguiente slide
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
 
-  slides.style.transform = `translateX(-${currentService * 100}%)`;
-}
+        // Retrocede al slide anterior
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
 
-// Auto slide servicios cada 5 segundos
-setInterval(() => {
-  moveService(1);
-}, 5000);
+        // Inicia el carrusel automático
+        function startAutoSlide() {
+            if (autoSlideInterval > 0) {
+               intervalId = setInterval(nextSlide, autoSlideInterval);
+            }
+        }
 
-// Slider de testimonios
-let currentSlide = 0;
+        // Detiene el carrusel automático
+        function stopAutoSlide() {
+            clearInterval(intervalId);
+        }
 
-function moveTestimonial(step) {
-  const slides = document.querySelector('.testimonial-slider');
-  const totalSlides = slides.children.length;
+        // Reinicia el temporizador del carrusel (útil después de una navegación manual)
+        function resetAutoSlide() {
+            stopAutoSlide();
+            startAutoSlide();
+        }
+        
+        // Asignar eventos a los botones de control
+        if(nextButton) {
+            nextButton.addEventListener('click', () => {
+                nextSlide();
+                resetAutoSlide();
+            });
+        }
 
-  currentSlide += step;
+        if(prevButton) {
+            prevButton.addEventListener('click', () => {
+                prevSlide();
+                resetAutoSlide();
+            });
+        }
 
-  if (currentSlide >= totalSlides) currentSlide = 0;
-  if (currentSlide < 0) currentSlide = totalSlides - 1;
+        // Iniciar el slider al cargar la página
+        showSlide(currentIndex);
+        startAutoSlide();
+    }
 
-  slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-}
+    // Inicializar ambos sliders con sus respectivas configuraciones
+    createSlider('service-slider', 'service-slide', 5000); // Auto-slide cada 5 segundos
+    createSlider('testimonial-slider', 'testimonial-slide', 6000); // Auto-slide cada 6 segundos
 
-// Auto slide testimonios cada 6 segundos
-setInterval(() => {
-  moveTestimonial(1);
-}, 6000);
+    // --- Actualizar año en el footer ---
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+});
