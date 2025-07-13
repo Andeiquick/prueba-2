@@ -1,222 +1,509 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SmileCare - Recupera la Confianza en tu Sonrisa</title>
-    
-    <!-- Tailwind CSS (requiere conexión a internet) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts: Poppins -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maxilar Implant - Líderes en Implantología Dental</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome (para los iconos) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&family=Lora:wght@500&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* =============================================== */
+        /* ==     1. ESTILOS GLOBALES Y PALETA DE COLOR   == */
+        /* =============================================== */
+        :root {
+            --background: oklch(0.98 0.002 48.71);
+            --foreground: oklch(0.15 0.03 260);
+            --card: oklch(1 0 0);
+            --card-foreground: oklch(0.15 0.03 260);
+            --popover: oklch(1 0 0);
+            --popover-foreground: oklch(0.15 0.03 260);
+            --primary: oklch(0.65 0.16 30); /* Naranja Principal */
+            --primary-foreground: oklch(1 0 0);
+            --secondary: oklch(0.25 0.05 260); /* Azul Oscuro */
+            --secondary-foreground: oklch(1 0 0);
+            --muted: oklch(0.95 0.005 260);
+            --muted-foreground: oklch(0.45 0.02 260);
+            --accent: oklch(0.93 0.02 321);
+            --accent-foreground: oklch(0.37 0.03 259);
+            --destructive: oklch(0.63 0.20 25);
+            --destructive-foreground: oklch(1 0 0);
+            --border: oklch(0.9 0.01 260);
+            --input: oklch(0.9 0.01 260);
+            --ring: oklch(0.65 0.16 30);
+            
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --font-serif: 'Lora', serif;
+            --font-mono: 'Roboto Mono', monospace;
+            --radius: 1.25rem;
+            --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.07), 0 2px 4px -2px rgb(0 0 0 / 0.07);
+            --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.08), 0 4px 6px -4px rgb(0 0 0 / 0.08);
+            --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
 
-    <!-- ** IMPORTANTE: Aquí se conecta con tu archivo de estilos CSS ** -->
-    <link rel="stylesheet" href="index.css">
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background);
+            color: var(--foreground);
+        }
+
+        .text-primary { color: var(--primary); }
+        .bg-primary { background-color: var(--primary); }
+        .text-secondary { color: var(--secondary); }
+        .bg-secondary { background-color: var(--secondary); }
+        .border-primary { border-color: var(--primary); }
+
+        h1, h2, h3 {
+            font-weight: 800;
+        }
+
+        .card {
+            background-color: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius);
+            font-weight: 700;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            text-decoration: none;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+        }
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--secondary-foreground);
+        }
+        
+        .section-padding {
+            padding: 4rem 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 6rem 2rem;
+            }
+        }
+        
+        /* =============================================== */
+        /* ==     2. ESTILOS DE ANIMACIÓN 3D (Simulación) == */
+        /* =============================================== */
+        .card-container-3d {
+            perspective: 1000px;
+        }
+        .card-3d {
+            background-color: var(--card);
+            border: 1px solid var(--border);
+            transition: transform 0.2s ease-out;
+            transform-style: preserve-3d;
+        }
+        .card-item-3d {
+            transition: transform 0.2s ease-out;
+        }
+    </style>
 </head>
 <body class="bg-gray-50">
 
-    <!-- Menú de Navegación -->
-    <header class="bg-primary text-white p-4 sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#inicio" class="text-2xl font-bold">Smile<span class="logo-accent">Care</span></a>
-            <nav class="hidden md:flex items-center space-x-6">
-                <a href="#beneficios" class="nav-link transition-colors duration-300">Beneficios</a>
-                <a href="#servicios" class="nav-link transition-colors duration-300">Servicios</a>
-                <a href="#testimonios" class="nav-link transition-colors duration-300">Testimonios</a>
-                <a href="#contacto" class="nav-link transition-colors duration-300">Contacto</a>
-            </nav>
-            <button id="hamburger-button" class="md:hidden text-2xl">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        <!-- Menú Móvil -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4">
-            <nav class="flex flex-col space-y-4">
-                <a href="#beneficios" class="nav-link transition-colors duration-300">Beneficios</a>
-                <a href="#servicios" class="nav-link transition-colors duration-300">Servicios</a>
-                <a href="#testimonios" class="nav-link transition-colors duration-300">Testimonios</a>
-                <a href="#contacto" class="nav-link transition-colors duration-300">Contacto</a>
-            </nav>
-        </div>
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="font-bold text-2xl text-secondary">Maxilar<span class="text-primary">Implant</span></a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#servicios" class="text-gray-600 hover:text-primary transition">Servicios</a>
+                <a href="#nosotros" class="text-gray-600 hover:text-primary transition">Nosotros</a>
+                <a href="#testimonios" class="text-gray-600 hover:text-primary transition">Testimonios</a>
+            </div>
+            <a href="#contacto" class="btn btn-primary">Agendar Cita</a>
+        </nav>
     </header>
 
     <main>
-        <!-- Sección Hero (Banner) -->
-        <section id="inicio" class="hero-bg bg-cover bg-center min-h-[90vh] flex items-center">
-            <div class="container mx-auto px-6 text-center md:text-left text-white">
-                <div class="max-w-2xl">
-                    <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Recupera la Confianza en tu Sonrisa</h1>
-                    <p class="text-lg md:text-xl mb-8">Combinamos arte, ciencia y atención personalizada para diseñar la sonrisa que siempre has deseado. Tu bienestar es nuestra prioridad.</p>
-                    <a href="https://wa.me/1234567890?text=Hola,%20me%20gustaría%20agendar%20una%20valoración%20inicial." target="_blank" class="btn-cta text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-block">
-                        <i class="fab fa-whatsapp mr-2"></i> Agendar Valoración Inicial
-                    </a>
+        <section class="bg-white">
+            <div class="container mx-auto section-padding grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-secondary leading-tight">
+                        Líderes en <span class="text-primary">Implantología</span> Dental
+                    </h1>
+                    <p class="mt-6 text-lg text-gray-600 max-w-xl mx-auto md:mx-0">
+                        Nuestro equipo de especialistas utiliza tecnología avanzada para proporcionar tratamientos personalizados, garantizando resultados excepcionales y una experiencia sin dolor.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#contacto" class="btn btn-primary text-lg">Quiero recuperar mi sonrisa</a>
+                    </div>
+                </div>
+                <div>
+                     <img src="http://googleusercontent.com/file_content/6" alt="Equipo de Maxilar Implant" class="rounded-2xl shadow-lg w-full h-auto">
                 </div>
             </div>
         </section>
 
-        <!-- Sección Beneficios / Por Qué Elegirnos -->
-        <section id="beneficios" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">La Experiencia SmileCare</h2>
-                <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">Más que una clínica dental, somos tus aliados en salud y estética. Descubre por qué nuestros pacientes nos confían su sonrisa.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <!-- Beneficio 1 -->
-                    <div class="p-6">
-                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-microchip"></i></div>
-                        <h3 class="text-xl font-bold mb-2">Tecnología de Vanguardia</h3>
-                        <p>Utilizamos equipos de última generación para diagnósticos precisos y tratamientos más cómodos, rápidos y efectivos.</p>
-                    </div>
-                    <!-- Beneficio 2 -->
-                    <div class="p-6">
-                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-user-tie"></i></div>
-                        <h3 class="text-xl font-bold mb-2">Expertos Apasionados</h3>
-                        <p>Nuestro equipo está en constante formación para ofrecerte las técnicas más innovadoras con un trato cálido y humano.</p>
-                    </div>
-                    <!-- Beneficio 3 -->
-                    <div class="p-6">
-                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-hand-holding-heart"></i></div>
-                        <h3 class="text-xl font-bold mb-2">Atención 100% Personalizada</h3>
-                        <p>No hay dos sonrisas iguales. Diseñamos un plan de tratamiento a tu medida, escuchando tus necesidades y objetivos.</p>
+        <div class="bg-gray-100 py-12">
+            <div class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="text-4xl font-extrabold text-primary">8,000+</p>
+                    <p class="text-sm text-gray-500 mt-1">Clientes Satisfechos</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-extrabold text-primary">24+</p>
+                    <p class="text-sm text-gray-500 mt-1">Años de Experiencia</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-extrabold text-primary">9,000+</p>
+                    <p class="text-sm text-gray-500 mt-1">Implantes Colocados</p>
+                </div>
+                <div>
+                    <p class="text-4xl font-extrabold text-primary">2,500+</p>
+                    <p class="text-sm text-gray-500 mt-1">Prótesis Realizadas</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="nosotros" class="section-padding bg-white">
+            <div class="container mx-auto grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <img src="http://googleusercontent.com/file_content/4" alt="Dr. Eduardo López Martínez en Maxilar Implant" class="rounded-2xl shadow-lg">
+                </div>
+                <div>
+                    <h2 class="text-3xl md:text-4xl text-secondary">Bienvenido a <span class="text-primary">Maxilar Implant</span></h2>
+                    <p class="mt-6 text-gray-600">
+                        <span class="font-bold text-secondary">MAXILAR IMPLANT</span> es una Clínica que se dedica a realizar implantes dentales y servicios afines como rehabilitación oral y ortodoncia. Fundada en el año 2000 por el reconocido Dr. Eduardo López Martínez, especialista y diplomado en Implantología Oral.
+                    </p>
+                    <p class="mt-4 text-gray-600">
+                        El Dr. López ha colocado y rehabilitado con éxito más de 6,000 implantes dentales dentro y fuera del país. El servicio que brindamos es personalizado, desde el inicio hasta el final del tratamiento, brindando a los pacientes la calidad, seguridad, y garantía que se merecen.
+                    </p>
+                    <div class="mt-6">
+                        <img src="https://i.imgur.com/g5GIm2I.png" alt="Firma del Dr. Eduardo López" class="h-16">
+                        <p class="font-bold text-secondary mt-2">Dr. Eduardo López Martínez</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Servicios -->
-        <section id="servicios" class="py-16 md:py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Transforma tu Sonrisa con Nuestros Servicios</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Tarjeta de Servicio como un enlace a WhatsApp -->
-                    <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20consultar%20sobre%20el%20servicio%20de%20Limpieza%20Profesional." target="_blank" class="service-card-link">
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
-                            <img src="https://images.unsplash.com/photo-1629905675717-8c18c930a82b?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Dentista realizando una limpieza profesional" class="w-full h-48 object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <h3 class="text-xl font-bold mb-2">Limpieza Profesional</h3>
-                                <p class="text-gray-600 mb-4 flex-grow">Mantén tu sonrisa radiante y previene problemas futuros. La base de una salud bucal perfecta.</p>
-                                <span class="font-bold text-blue-600 mt-auto">Consultar por WhatsApp <i class="fas fa-arrow-right ml-1"></i></span>
+        <section id="servicios" class="section-padding bg-gray-50">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl text-secondary">Tratamientos <span class="text-primary">Maxilar Implant</span></h2>
+                    <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">Ofrecemos una gama completa de soluciones dentales para devolverte tu confianza y salud bucal.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="card-container-3d">
+                        <div class="card card-3d p-8 text-center h-full flex flex-col items-center justify-center">
+                            <img src="https://i.imgur.com/uJChc0t.png" alt="Icono Diseño de Sonrisa" class="h-20 w-20 card-item-3d">
+                            <h3 class="text-xl font-bold text-secondary mt-6 card-item-3d">Diseño de Sonrisa</h3>
+                            <p class="text-gray-500 mt-2 text-sm card-item-3d">Busca la alineación, ubicación y función precisa de las piezas dentales de acuerdo a cada paciente.</p>
+                        </div>
+                    </div>
+                    <div class="card-container-3d">
+                        <div class="card card-3d p-8 text-center h-full flex flex-col items-center justify-center">
+                             <img src="https://i.imgur.com/tH3G0fO.png" alt="Icono Rehabilitación Oral" class="h-20 w-20 card-item-3d">
+                            <h3 class="text-xl font-bold text-secondary mt-6 card-item-3d">Rehabilitación Oral</h3>
+                            <p class="text-gray-500 mt-2 text-sm card-item-3d">Devuelve la función estética y armonía oral cuando existen grandes destrucciones o problemas estéticos.</p>
+                        </div>
+                    </div>
+                    <div class="card-container-3d">
+                        <div class="card card-3d p-8 text-center h-full flex flex-col items-center justify-center">
+                             <img src="https://i.imgur.com/rN9e8v5.png" alt="Icono Ortodoncia" class="h-20 w-20 card-item-3d">
+                            <h3 class="text-xl font-bold text-secondary mt-6 card-item-3d">Ortodoncia</h3>
+                            <p class="text-gray-500 mt-2 text-sm card-item-3d">Tratamiento que previene y corrige las anomalías de forma, posición y función de las estructuras dentales.</p>
+                        </div>
+                    </div>
+                    <div class="card-container-3d">
+                        <div class="card card-3d p-8 text-center h-full flex flex-col items-center justify-center">
+                             <img src="https://i.imgur.com/t0b9qG2.png" alt="Icono Regeneración Ósea" class="h-20 w-20 card-item-3d">
+                            <h3 class="text-xl font-bold text-secondary mt-6 card-item-3d">Regeneración Ósea</h3>
+                            <p class="text-gray-500 mt-2 text-sm card-item-3d">En casos de pérdida de hueso, realizamos una regeneración indispensable previa a la colocación de implantes.</p>
+                        </div>
+                    </div>
+                     <div class="card-container-3d">
+                        <div class="card card-3d p-8 text-center h-full flex flex-col items-center justify-center">
+                             <img src="https://i.imgur.com/W2oE55l.png" alt="Icono Prótesis Híbridas" class="h-20 w-20 card-item-3d">
+                            <h3 class="text-xl font-bold text-secondary mt-6 card-item-3d">Prótesis Híbridas</h3>
+                            <p class="text-gray-500 mt-2 text-sm card-item-3d">Cuando un paciente ha perdido la totalidad de sus piezas, la prótesis híbrida es la mejor alternativa.</p>
+                        </div>
+                    </div>
+                    <div class="card-container-3d">
+                        <div class="card card-3d p-8 text-center h-full flex flex-col items-center justify-center">
+                             <img src="https://i.imgur.com/6E4gR24.png" alt="Icono Implantes Dentales" class="h-20 w-20 card-item-3d">
+                            <h3 class="text-xl font-bold text-secondary mt-6 card-item-3d">Implantes Dentales</h3>
+                            <p class="text-gray-500 mt-2 text-sm card-item-3d">Pequeñas raíces de titanio que reemplazan una o varias piezas perdidas, devolviendo función y estética.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-white">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl text-secondary">Soluciones a <span class="text-primary">Problemas Dentales</span></h2>
+                    <p class="mt-4 text-lg text-gray-500 max-w-2xl mx-auto">Utilizamos tecnología de punta para diagnósticos precisos y tratamientos cómodos.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card overflow-hidden">
+                        <img src="http://googleusercontent.com/file_content/0" alt="Sedoanalgesia">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-secondary">Sedoanalgesia</h3>
+                            <p class="mt-2 text-gray-600">Para evitar traumatismo y dolor en el paciente, realizamos nuestras cirugías con sedoanalgesia en un quirófano totalmente equipado.</p>
+                        </div>
+                    </div>
+                     <div class="card overflow-hidden">
+                        <img src="http://googleusercontent.com/file_content/0" alt="Implantología Oral">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-secondary">Implantología Oral</h3>
+                            <p class="mt-2 text-gray-600">Reemplazamos los dientes perdidos utilizando implantes suizos. Garantizamos la restitución de tu función masticatoria y estilo de vida.</p>
+                        </div>
+                    </div>
+                    <div class="card overflow-hidden">
+                        <img src="http://googleusercontent.com/file_content/3" alt="Odontología Reconstructiva">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-secondary">Odontología Reconstructiva</h3>
+                            <p class="mt-2 text-gray-600">Trabajamos en la restauración y embellecimiento de dientes fracturados, dañados, o perdidos.</p>
+                        </div>
+                    </div>
+                     <div class="card overflow-hidden">
+                        <img src="http://googleusercontent.com/file_content/3" alt="Radiología 3D">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-secondary">Radiología 3D</h3>
+                            <p class="mt-2 text-gray-600">Para garantizar la precisión de tu diagnóstico, contamos con servicios de radiología 3D dentro de nuestras instalaciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="testimonios" class="section-padding bg-gray-50">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl text-secondary">¿Qué dicen nuestros <span class="text-primary">pacientes?</span></h2>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="card p-8">
+                        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                        <p class="text-gray-600 italic">"Comienzo por extender mis sinceras felicitaciones al Dr. Eduardo López y su equipo. Anteriormente mi tratamiento dental estuvo en manos de una odontóloga quien me realizó trabajos no conformes con mi estilo y función de comer. Pero hoy me voy tranquila y admirando el profesionalismo del Dr. López. Muchas gracias."</p>
+                        <div class="flex items-center mt-6">
+                            <img src="https://i.imgur.com/8bxl04s.png" alt="Paciente Olga P." class="h-14 w-14 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-secondary">Olga P.</p>
+                                <p class="text-sm text-gray-500">Paciente</p>
                             </div>
                         </div>
-                    </a>
-                    <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20consultar%20sobre%20el%20servicio%20de%20Blanqueamiento%20Dental." target="_blank" class="service-card-link">
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
-                            <img src="https://images.unsplash.com/photo-1619451428368-831a58759a28?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Sonrisa blanca y brillante después de un blanqueamiento" class="w-full h-48 object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <h3 class="text-xl font-bold mb-2">Blanqueamiento Dental</h3>
-                                <p class="text-gray-600 mb-4 flex-grow">Deslumbra con una sonrisa visiblemente más blanca y joven en una sola sesión.</p>
-                                <span class="font-bold text-blue-600 mt-auto">Consultar por WhatsApp <i class="fas fa-arrow-right ml-1"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20consultar%20sobre%20el%20servicio%20de%20Implantes%20Dentales." target="_blank" class="service-card-link">
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
-                            <img src="https://images.unsplash.com/photo-1588776814546-da6316ac9152?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Modelo de un implante dental" class="w-full h-48 object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <h3 class="text-xl font-bold mb-2">Implantes Dentales</h3>
-                                <p class="text-gray-600 mb-4 flex-grow">La solución definitiva y de aspecto natural para reemplazar dientes perdidos y sonreír sin límites.</p>
-                                <span class="font-bold text-blue-600 mt-auto">Consultar por WhatsApp <i class="fas fa-arrow-right ml-1"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20consultar%20sobre%20el%20servicio%20de%20Ortodoncia%20Invisible." target="_blank" class="service-card-link">
-                        <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
-                            <img src="https://images.unsplash.com/photo-1617852909398-31cad3d2b2a0?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Alineadores de ortodoncia invisible" class="w-full h-48 object-cover">
-                            <div class="p-6 flex flex-col flex-grow">
-                                <h3 class="text-xl font-bold mb-2">Ortodoncia Invisible</h3>
-                                <p class="text-gray-600 mb-4 flex-grow">Corrige la posición de tus dientes de la forma más discreta, cómoda y moderna.</p>
-                                <span class="font-bold text-blue-600 mt-auto">Consultar por WhatsApp <i class="fas fa-arrow-right ml-1"></i></span>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Testimonios -->
-        <section id="testimonios" class="py-16 md:py-24 bg-secondary">
-            <div class="container mx-auto text-center px-6">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12">Pacientes que Vuelven a Sonreír</h2>
-                <div id="testimonial-slider" class="relative max-w-3xl mx-auto">
-                    <!-- Slides de Testimonios -->
-                    <div class="testimonial-slide">
-                        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" onerror="this.onerror=null;this.src='https://placehold.co/80x80/EFEFEF/333?text=:)';" alt="Laura M." class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-blue-200">
-                            <p class="text-gray-600 italic mb-4">"El equipo de SmileCare no solo me devolvió la sonrisa, sino la confianza para mostrarla. El trato fue increíblemente humano y profesional. ¡Gracias!"</p>
-                            <strong class="text-gray-800">- Laura M., Paciente de Implantes</strong>
-                        </div>
                     </div>
-                    <div class="testimonial-slide hidden">
-                        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" onerror="this.onerror=null;this.src='https://placehold.co/80x80/EFEFEF/333?text=:)';" alt="Andrés R." class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-blue-200">
-                            <p class="text-gray-600 italic mb-4">"Mi tratamiento de ortodoncia invisible fue mucho más rápido y cómodo de lo que imaginé. Estoy feliz con los resultados. ¡Totalmente recomendados!"</p>
-                            <strong class="text-gray-800">- Andrés R., Paciente de Ortodoncia</strong>
-                        </div>
-                    </div>
-                    <!-- Controles del Slider -->
-                    <button class="slider-prev absolute top-1/2 -left-4 md:-left-12 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md transition-all">
-                        <i class="fas fa-chevron-left text-gray-700 h-6 w-6"></i>
-                    </button>
-                    <button class="slider-next absolute top-1/2 -right-4 md:-right-12 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md transition-all">
-                        <i class="fas fa-chevron-right text-gray-700 h-6 w-6"></i>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección de Contacto y Mapa -->
-        <section id="contacto" class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Da el Primer Paso Hacia tu Mejor Sonrisa</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <!-- Formulario -->
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Envíanos un Mensaje</h3>
-                        <p class="text-gray-600 mb-6">Si tienes alguna duda o prefieres escribirnos, completa el formulario. Te responderemos a la brevedad.</p>
-                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
-                            <input type="text" name="name" placeholder="Tu nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
-                            <input type="email" name="email" placeholder="Tu correo electrónico" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
-                            <textarea name="message" placeholder="Tu mensaje" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"></textarea>
-                            <button type="submit" class="btn-cta w-full text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-xl transition-all duration-300">
-                                Enviar Mensaje
-                            </button>
-                        </form>
-                    </div>
-                    <!-- Mapa e Info -->
-                    <div>
-                         <h3 class="text-2xl font-bold mb-2">Visítanos</h3>
-                        <p class="text-gray-600 mb-6">Encuéntranos en el corazón de la ciudad. Estamos listos para recibirte.</p>
-                        <div class="map-container rounded-lg overflow-hidden shadow-lg">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.096662457694!2d-122.41941548468125!3d37.7749292797598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c8a0d0f6d%3A0x5fd531521f95d49e!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2ses!4v1614958607997!5m2!1sen!2ses" 
-                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                     <div class="card p-8">
+                        <div class="flex text-yellow-400 mb-4">★★★★★</div>
+                        <p class="text-gray-600 italic">"Estoy muy agradecida con el Dr. López porque tengo ahora una linda sonrisa y mis dientes lindos. Tengo nueva vida porque estoy segura con mis implantes. Y gracias a Dios y al Dr. que tiene una linda mano que no se siente dolor. Muchas gracias al Dr."</p>
+                        <div class="flex items-center mt-6">
+                            <img src="https://i.imgur.com/G5i5j8A.png" alt="Paciente Teresa G." class="h-14 w-14 rounded-full mr-4">
+                            <div>
+                                <p class="font-bold text-secondary">Teresa G.</p>
+                                <p class="text-sm text-gray-500">Paciente</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        
+        <section id="contacto" class="section-padding bg-primary">
+            <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white text-center md:text-left">
+                    <h2 class="text-3xl md:text-4xl font-extrabold">¡Recupera tu sonrisa hoy!</h2>
+                    <p class="mt-4 text-lg opacity-90">El primer paso para una nueva vida llena de confianza está a solo un clic. Nuestro equipo se pondrá en contacto contigo a la brevedad posible.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-secondary mb-6 text-center">Agenda una Cita</h3>
+                    <form action="#" class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Nombres *" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                        </div>
+                        <div>
+                            <input type="tel" placeholder="Teléfono *" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                        </div>
+                         <div>
+                            <input type="email" placeholder="Email *" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none">
+                        </div>
+                        <div>
+                            <textarea placeholder="Mensaje *" rows="4" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-secondary w-full text-lg">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-primary text-white text-center p-8">
-        <p class="font-bold text-lg">SmileCare Odontología</p>
-        <p>&copy; <span id="year"></span> Todos los derechos reservados.</p>
+    
+    <footer class="bg-secondary text-white">
+        <div class="container mx-auto p-8 text-center">
+            <p>&copy; 2024 Maxilar Implant. Todos los derechos reservados.</p>
+            <p class="text-sm opacity-70 mt-2">Diseñado con ♥ en Quevedo</p>
+        </div>
     </footer>
+    
+    <script>
+        document.querySelectorAll('.card-container-3d').forEach(container => {
+            const card = container.querySelector('.card-3d');
+            const cardItems = container.querySelectorAll('.card-item-3d');
+            
+            container.addEventListener('mousemove', (e) => {
+                const { left, top, width, height } = container.getBoundingClientRect();
+                const x = (e.clientX - left - width / 2) / 15;
+                const y = (e.clientY - top - height / 2) / -15;
+                card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+                
+                cardItems.forEach(item => {
+                    item.style.transform = `translateZ(40px)`;
+                });
+            });
+            
+            container.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(0deg)';
+                cardItems.forEach(item => {
+                    item.style.transform = 'translateZ(0px)';
+                });
+            });
+        });
+    </script>
+    
+    <script type="text/plain" id="react-instructions">
+        /*
+        INSTRUCCIONES PARA EL DESARROLLADOR:
+        
+        Para implementar la animación 3D de las tarjetas de servicios de forma nativa en un proyecto React con shadcn/ui y Tailwind CSS, sigue estos pasos:
+        
+        1. **Verificar Entorno:**
+           Asegúrate de que tu proyecto esté configurado con:
+           - Un proyecto shadcn/ui: `npx shadcn-ui@latest init`
+           - Tailwind CSS v4.0 o compatible.
+           - TypeScript.
 
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/1234567890?text=Hola,%20me%20gustaría%20agendar%20una%20valoración." target="_blank" class="whatsapp-button fixed bottom-5 right-5 w-16 h-16 rounded-full flex items-center justify-center text-white text-4xl shadow-lg z-40" aria-label="Contacto por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+        2. **Crear Directorio de Componentes:**
+           Si no existe, crea la carpeta `/components/ui`. Es una convención estándar en proyectos shadcn/ui para mantener los componentes de UI reutilizables.
+           
+        3. **Copiar los Componentes:**
+           Copia los siguientes dos archivos en tu proyecto en las rutas especificadas.
+        */
+    </script>
 
-    <!-- ** IMPORTANTE: Aquí se conecta con tu archivo de JavaScript ** -->
-    <script src="index.js" defer></script>
+    <script type="text/babel" id="3d-card-component">
+    "use client";
+    import { cn } from "@/lib/utils";
+    import React, { createContext, useState, useContext, useRef, useEffect } from "react";
+
+    const MouseEnterContext = createContext<[boolean, React.Dispatch<React.SetStateAction<boolean>>] | undefined>(undefined);
+
+    export const CardContainer = ({ children, className, containerClassName }: { children?: React.ReactNode; className?: string; containerClassName?: string; }) => {
+        const containerRef = useRef<HTMLDivElement>(null);
+        const [isMouseEntered, setIsMouseEntered] = useState(false);
+
+        const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+            if (!containerRef.current) return;
+            const { left, top, width, height } = containerRef.current.getBoundingClientRect();
+            const x = (e.clientX - left - width / 2) / 25;
+            const y = (e.clientY - top - height / 2) / 25;
+            containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+        };
+
+        const handleMouseEnter = (e: React.MouseEvent<HTMLDivElement>) => {
+            setIsMouseEntered(true);
+        };
+
+        const handleMouseLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+            if (!containerRef.current) return;
+            setIsMouseEntered(false);
+            containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
+        };
+        
+        return (
+            <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
+                <div className={cn("py-20 flex items-center justify-center", containerClassName)} style={{ perspective: "1000px" }}>
+                    <div ref={containerRef} onMouseEnter={handleMouseEnter} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} className={cn("flex items-center justify-center relative transition-all duration-200 ease-linear", className)} style={{ transformStyle: "preserve-3d" }}>
+                        {children}
+                    </div>
+                </div>
+            </MouseEnterContext.Provider>
+        );
+    };
+
+    export const CardBody = ({ children, className }: { children: React.ReactNode; className?: string; }) => {
+        return (
+            <div className={cn("h-96 w-96 [transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]", className)}>
+                {children}
+            </div>
+        );
+    };
+
+    export const CardItem = ({ as: Tag = "div", children, className, translateX = 0, translateY = 0, translateZ = 0, rotateX = 0, rotateY = 0, rotateZ = 0, ...rest }: { as?: React.ElementType; children: React.ReactNode; className?: string; translateX?: number | string; translateY?: number | string; translateZ?: number | string; rotateX?: number | string; rotateY?: number | string; rotateZ?: number | string; [key: string]: any; }) => {
+        const ref = useRef<HTMLDivElement>(null);
+        const [isMouseEntered] = useMouseEnter();
+
+        useEffect(() => {
+            handleAnimations();
+        }, [isMouseEntered]);
+
+        const handleAnimations = () => {
+            if (!ref.current) return;
+            if (isMouseEntered) {
+                ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+            } else {
+                ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+            }
+        };
+        
+        return (
+            <Tag ref={ref} className={cn("w-fit transition duration-200 ease-linear", className)} {...rest}>
+                {children}
+            </Tag>
+        );
+    };
+
+    export const useMouseEnter = () => {
+        const context = useContext(MouseEnterContext);
+        if (context === undefined) {
+            throw new Error("useMouseEnter must be used within a MouseEnterProvider");
+        }
+        return context;
+    };
+    </script>
+    
+    <script type="text/babel" id="3d-card-demo-component">
+    "use client";
+    import React from "react";
+    import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+
+    export default function ThreeDCardDemo() {
+      return (
+        <CardContainer className="inter-var">
+          <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
+            <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
+              Diseño de Sonrisa
+            </CardItem>
+            <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+              Pasa el mouse sobre esta tarjeta para ver el efecto 3D.
+            </CardItem>
+            <CardItem translateZ="100" className="w-full mt-4">
+              <img
+                src="URL_DE_IMAGEN_DEL_SERVICIO"
+                height="1000"
+                width="1000"
+                className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                alt="thumbnail"
+              />
+            </CardItem>
+          </CardBody>
+        </CardContainer>
+      );
+    }
+    </script>
+
 </body>
 </html>
-
