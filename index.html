@@ -1,1 +1,456 @@
+<!DOCTYPE html>
+<html lang="es" style="scroll-behavior: smooth;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ortodoncia SmileCare Quevedo | Transforma tu Sonrisa</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦷</text></svg>">
+
+    <style>
+        :root {
+            --background: oklch(0.9842 0.0034 247.8575);
+            --foreground: oklch(0.2795 0.0368 260.0310);
+            --card: oklch(1.0000 0 0);
+            --card-foreground: oklch(0.2795 0.0368 260.0310);
+            --popover: oklch(1.0000 0 0);
+            --popover-foreground: oklch(0.2795 0.0368 260.0310);
+            --primary: oklch(0.5854 0.2041 277.1173);
+            --primary-foreground: oklch(1.0000 0 0);
+            --secondary: oklch(0.9670 0.0029 264.5419); /* Gris claro para fondos de sección */
+            --secondary-foreground: oklch(0.3729 0.0306 259.7328);
+            --muted: oklch(0.9670 0.0029 264.5419);
+            --muted-foreground: oklch(0.5510 0.0234 264.3637);
+            --accent: oklch(0.9299 0.0334 272.7879);
+            --accent-foreground: oklch(0.3729 0.0306 259.7328);
+            --destructive: oklch(0.6368 0.2078 25.3313);
+            --destructive-foreground: oklch(1.0000 0 0);
+            --border: oklch(0.8717 0.0093 258.3382);
+            --input: oklch(0.8717 0.0093 258.3382);
+            --ring: oklch(0.5854 0.2041 277.1173);
+            --footer-background: oklch(0.2077 0.0398 265.7549); /* Color oscuro para el footer */
+            --footer-foreground: oklch(0.9288 0.0126 255.5078); /* Color claro para texto de footer */
+            
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Merriweather', serif;
+            --radius: 0.5rem;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--background);
+            color: var(--foreground);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-sans);
+            font-weight: 800; /* Extra Bold para títulos */
+        }
+        
+        .font-serif {
+            font-family: var(--font-serif);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background-color: var(--primary);
+            color: var(--primary-foreground);
+            border-radius: var(--radius);
+            font-weight: 700;
+            text-align: center;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-[var(--background)] text-[var(--foreground)]">
+
+    <header class="bg-[var(--card)] sticky top-0 z-50 shadow-md">
+        <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="text-2xl font-bold text-[var(--primary)]">
+                    🦷 SmileCare Quevedo
+                </a>
+                <a href="#cta-final" class="cta-button hidden sm:inline-block">
+                    Agendar Cita
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="banner" class="text-center py-20 lg:py-32 bg-[var(--background)]">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-[var(--foreground)] leading-tight">
+                    Transforma tu sonrisa. <br class="hidden md:block" /> Transforma tu vida.
+                </h1>
+                <p class="mt-6 text-lg md:text-xl max-w-2xl mx-auto text-[var(--muted-foreground)]">
+                    Ortodoncia avanzada para niños, jóvenes y adultos en Quevedo — Más de 10 años creando sonrisas seguras y felices.
+                </p>
+                <div class="mt-10">
+                    <a href="#cta-final" class="cta-button">
+                        Agenda tu Valoración GRATIS
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="nosotros" class="py-16 sm:py-24 bg-[var(--secondary)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="max-w-md">
+                    <img src="https://images.unsplash.com/photo-1579758629938-03607ccDB445?q=80&w=1974&auto=format&fit=crop" alt="Clínica SmileCare" class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="text-lg">
+                    <h2 class="text-3xl lg:text-4xl font-bold text-[var(--foreground)] mb-6">
+                        En SmileCare, tu sonrisa es nuestra pasión
+                    </h2>
+                    <p class="mb-4 text-[var(--muted-foreground)]">
+                        Sabemos que una sonrisa alineada no solo mejora tu imagen… también transforma tu autoestima, tu salud y tu vida social.
+                    </p>
+                    <p class="mb-4 text-[var(--muted-foreground)]">
+                        Somos una clínica odontológica con más de 10 años de experiencia en Quevedo, especializada en tratamientos de ortodoncia. Contamos con un equipo de especialistas, tecnología de última generación y un trato cálido que nos permite ofrecerte una experiencia segura, clara y efectiva desde el primer día.
+                    </p>
+                    <a href="https://wa.me/ECUADORPHONE?text=Hola%2C%20quisiera%20agendar%20una%20cita%20de%20valoración%20ortodóntica." target="_blank" class="font-bold text-[var(--primary)] hover:underline mt-4 inline-block">
+                        📲 Agenda tu cita de valoración por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="que-es" class="py-16 sm:py-24 bg-[var(--background)]">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold text-[var(--foreground)] mb-6">¿Qué es la Ortodoncia y por qué importa?</h2>
+                <p class="text-lg text-[var(--muted-foreground)] mb-4">
+                    La ortodoncia es una rama de la odontología que se encarga de corregir la posición de los dientes y los huesos maxilares.
+                </p>
+                <p class="text-lg text-[var(--muted-foreground)]">
+                    No solo mejora la estética dental, sino que también evita problemas de mordida, desgaste de piezas, dolores musculares y dificultad para hablar o masticar. Un tratamiento ortodóntico a tiempo puede prevenir años de incomodidad o tratamientos más costosos en el futuro.
+                </p>
+            </div>
+        </section>
+
+        <section id="servicios" class="py-16 sm:py-24 bg-[var(--secondary)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center text-[var(--foreground)] mb-12">Nuestros Servicios de Ortodoncia</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-[var(--card)] p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold text-[var(--primary)] mb-4">Ortodoncia Invisible</h3>
+                        <p class="text-[var(--muted-foreground)]">Ideal para adultos y jóvenes que buscan resultados discretos. Alineadores transparentes, removibles y cómodos.</p>
+                    </div>
+                    <div class="bg-[var(--card)] p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold text-[var(--primary)] mb-4">Brackets Cerámicos</h3>
+                        <p class="text-[var(--muted-foreground)]">Ofrecen un tratamiento eficaz con mayor estética, ya que su color se mimetiza con el diente. Discretos y efectivos.</p>
+                    </div>
+                    <div class="bg-[var(--card)] p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold text-[var(--primary)] mb-4">Brackets Metálicos</h3>
+                        <p class="text-[var(--muted-foreground)]">La opción más tradicional y efectiva para todo tipo de maloclusiones. Resistentes, económicos y confiables.</p>
+                    </div>
+                    <div class="bg-[var(--card)] p-8 rounded-lg shadow-md text-center">
+                        <h3 class="text-xl font-bold text-[var(--primary)] mb-4">Ortopedia Infantil</h3>
+                        <p class="text-[var(--muted-foreground)]">Corrige problemas óseos y guía el desarrollo facial desde los 5 años, evitando tratamientos complejos a futuro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="diferenciadores" class="py-16 sm:py-24 bg-[var(--background)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center text-[var(--foreground)] mb-12">¿Por qué elegir SmileCare?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="text-4xl text-[var(--primary)] mb-3">🏆</div>
+                        <h3 class="text-lg font-bold mb-2">Más de 10 años de experiencia</h3>
+                        <p class="text-[var(--muted-foreground)]">Confianza construida con cientos de familias que ya nos han elegido.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="text-4xl text-[var(--primary)] mb-3">💻</div>
+                        <h3 class="text-lg font-bold mb-2">Tecnología avanzada</h3>
+                        <p class="text-[var(--muted-foreground)]">Escáneres digitales y radiografías 3D para diagnósticos precisos.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="text-4xl text-[var(--primary)] mb-3">❤️</div>
+                        <h3 class="text-lg font-bold mb-2">Atención cálida y personalizada</h3>
+                        <p class="text-[var(--muted-foreground)]">Te explicamos tu proceso sin prisas ni tecnicismos.</p>
+                    </div>
+                    <div class="flex flex-col items-center md:col-start-1 lg:col-start-auto">
+                        <div class="text-4xl text-[var(--primary)] mb-3">🧒</div>
+                        <h3 class="text-lg font-bold mb-2">Especialistas en niños</h3>
+                        <p class="text-[var(--muted-foreground)]">Creamos un entorno amigable para que pierdan el miedo al dentista.</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="text-4xl text-[var(--primary)] mb-3">🌟</div>
+                        <h3 class="text-lg font-bold mb-2">Resultados visibles</h3>
+                        <p class="text-[var(--muted-foreground)]">Mejora estética y confianza renovada en cada paciente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="historia" class="py-16 sm:py-24 bg-[var(--secondary)]">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <blockquote class="font-serif text-xl md:text-2xl italic text-[var(--foreground)] relative">
+                    <p class="before:content-['“'] before:text-6xl before:text-[var(--primary)] before:absolute before:-top-5 before:-left-5 after:content-['”'] after:text-6xl after:text-[var(--primary)] after:absolute after:-bottom-10 after:-right-5">
+                    Cuando Camila llegó a SmileCare, apenas hablaba. Tenía 9 años y evitaba sonreír porque sus dientes estaban muy torcidos. Empezamos un tratamiento de ortopedia infantil y hoy, un año después, Camila sonríe con seguridad y participa en obras escolares sin miedo. Su confianza volvió, y con ella… una sonrisa que ilumina todo.
+                    </p>
+                </blockquote>
+                <cite class="block mt-8 font-bold text-lg text-[var(--muted-foreground)] not-italic">
+                    — Dra. Sofía P., ortodoncista SmileCare
+                </cite>
+            </div>
+        </section>
+
+        <section id="testimonios" class="py-16 sm:py-24 bg-[var(--background)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center text-[var(--foreground)] mb-12">Lo que dicen nuestros pacientes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-[var(--card)] p-6 rounded-lg shadow-md border-l-4 border-[var(--primary)]">
+                        <p class="text-[var(--muted-foreground)] italic mb-4">"Mi hija tenía los dientes muy desalineados. En menos de un año ya notamos el cambio. ¡Ella sonríe con más seguridad ahora! Gracias SmileCare."</p>
+                        <p class="font-bold text-[var(--foreground)]">— Maritza G., mamá de paciente</p>
+                    </div>
+                    <div class="bg-[var(--card)] p-6 rounded-lg shadow-md border-l-4 border-[var(--primary)]">
+                        <p class="text-[var(--muted-foreground)] italic mb-4">"Tenía miedo de usar brackets como adulto. Me recomendaron la ortodoncia invisible y fue lo mejor. Cómodo, sin que nadie lo notara."</p>
+                        <p class="font-bold text-[var(--foreground)]">— Cristian P., paciente de 32 años</p>
+                    </div>
+                    <div class="bg-[var(--card)] p-6 rounded-lg shadow-md border-l-4 border-[var(--primary)]">
+                        <p class="text-[var(--muted-foreground)] italic mb-4">"El ambiente es muy tranquilo. Mis controles son puntuales y siempre me explican todo con claridad."</p>
+                        <p class="font-bold text-[var(--foreground)]">— Verónica A., paciente con brackets</p>
+                    </div>
+                    <div class="bg-[var(--card)] p-6 rounded-lg shadow-md border-l-4 border-[var(--primary)]">
+                        <p class="text-[var(--muted-foreground)] italic mb-4">"Mi hijo lloraba en otras clínicas, pero aquí se ríe con la doctora. Ya no le tiene miedo al dentista y eso para mí vale oro."</p>
+                        <p class="font-bold text-[var(--foreground)]">— Lorena C., mamá de paciente</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proceso" class="py-16 sm:py-24 bg-[var(--secondary)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center text-[var(--foreground)] mb-12">Tu Camino hacia la Sonrisa Perfecta</h2>
+                <div class="max-w-2xl mx-auto">
+                    <ol class="space-y-8 relative border-l-2 border-[var(--primary)] ml-4">
+                        <li class="ml-8">
+                            <span class="absolute -left-5 flex items-center justify-center w-8 h-8 bg-[var(--primary)] rounded-full text-[var(--primary-foreground)] font-bold">1</span>
+                            <h3 class="font-bold text-lg text-[var(--foreground)]">Evaluación inicial gratuita</h3>
+                            <p class="text-[var(--muted-foreground)]">Conocemos tu caso y definimos tus objetivos.</p>
+                        </li>
+                        <li class="ml-8">
+                            <span class="absolute -left-5 flex items-center justify-center w-8 h-8 bg-[var(--primary)] rounded-full text-[var(--primary-foreground)] font-bold">2</span>
+                            <h3 class="font-bold text-lg text-[var(--foreground)]">Plan de tratamiento personalizado</h3>
+                            <p class="text-[var(--muted-foreground)]">Diseñamos la mejor solución para ti con tecnología digital.</p>
+                        </li>
+                         <li class="ml-8">
+                            <span class="absolute -left-5 flex items-center justify-center w-8 h-8 bg-[var(--primary)] rounded-full text-[var(--primary-foreground)] font-bold">3</span>
+                            <h3 class="font-bold text-lg text-[var(--foreground)]">Colocación del tratamiento</h3>
+                            <p class="text-[var(--muted-foreground)]">Iniciamos tu transformación con cuidado y precisión.</p>
+                        </li>
+                         <li class="ml-8">
+                            <span class="absolute -left-5 flex items-center justify-center w-8 h-8 bg-[var(--primary)] rounded-full text-[var(--primary-foreground)] font-bold">4</span>
+                            <h3 class="font-bold text-lg text-[var(--foreground)]">Controles mensuales</h3>
+                            <p class="text-[var(--muted-foreground)]">Ajustamos y supervisamos tu progreso de cerca.</p>
+                        </li>
+                         <li class="ml-8">
+                            <span class="absolute -left-5 flex items-center justify-center w-8 h-8 bg-[var(--primary)] rounded-full text-[var(--primary-foreground)] font-bold">5</span>
+                            <h3 class="font-bold text-lg text-[var(--foreground)]">Resultados duraderos</h3>
+                            <p class="text-[var(--muted-foreground)]">Finalizamos con una sonrisa que te encantará lucir.</p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" class="py-16 sm:py-24 bg-[var(--background)]">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center text-[var(--foreground)] mb-12">Preguntas Frecuentes</h2>
+                <div class="space-y-4" id="faq-accordion">
+                    <div class="border-b border-[var(--border)] pb-4">
+                        <button class="faq-question w-full flex justify-between items-center text-left text-lg font-semibold text-[var(--foreground)]">
+                            <span>¿A qué edad se puede empezar un tratamiento?</span>
+                            <svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden mt-2 text-[var(--muted-foreground)]">
+                            Desde los 5-6 años en casos infantiles con ortopedia. Para ortodoncia con brackets, lo ideal es una vez que han salido los dientes permanentes. Nunca es tarde, también tenemos excelentes resultados en adultos. Lo ideal es una evaluación temprana.
+                        </div>
+                    </div>
+                    <div class="border-b border-[var(--border)] pb-4">
+                        <button class="faq-question w-full flex justify-between items-center text-left text-lg font-semibold text-[var(--foreground)]">
+                            <span>¿Duele ponerse brackets?</span>
+                            <svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden mt-2 text-[var(--muted-foreground)]">
+                            Es normal sentir una ligera molestia o presión los primeros días después de la colocación y los ajustes. Esta sensación es temporal y se controla fácilmente con analgésicos comunes si fuera necesario.
+                        </div>
+                    </div>
+                    <div class="border-b border-[var(--border)] pb-4">
+                        <button class="faq-question w-full flex justify-between items-center text-left text-lg font-semibold text-[var(--foreground)]">
+                            <span>¿Cuánto dura un tratamiento?</span>
+                            <svg class="w-5 h-5 transition-transform transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </button>
+                        <div class="faq-answer hidden mt-2 text-[var(--muted-foreground)]">
+                            La duración varía mucho según la complejidad de cada caso. En promedio, un tratamiento de ortodoncia puede durar entre 12 meses y 2 años. Casos más sencillos pueden durar 6 meses, mientras que otros más complejos pueden extenderse.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="profesionales" class="py-16 sm:py-24 bg-[var(--secondary)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-center text-[var(--foreground)] mb-12">Conoce a Nuestros Profesionales</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-[var(--card)] text-center p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2">
+                        <img class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=2564&auto=format&fit=crop" alt="Dra. Valeria Muñoz">
+                        <h3 class="text-xl font-bold text-[var(--primary)]">Dra. Valeria Muñoz</h3>
+                        <p class="font-semibold text-[var(--muted-foreground)] mb-2">Ortodoncista</p>
+                        <p class="text-sm text-[var(--card-foreground)]">Especialista en ortodoncia estética e invisible. Apasionada por transformar sonrisas con precisión.</p>
+                    </div>
+                    <div class="bg-[var(--card)] text-center p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2">
+                        <img class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" src="https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540" alt="Dra. Sofía Paredes">
+                        <h3 class="text-xl font-bold text-[var(--primary)]">Dra. Sofía Paredes</h3>
+                        <p class="font-semibold text-[var(--muted-foreground)] mb-2">Ortopedista Infantil</p>
+                        <p class="text-sm text-[var(--card-foreground)]">Experta en odontopediatría y ortopedia maxilar. Acompaña a los niños desde sus primeros años.</p>
+                    </div>
+                    <div class="bg-[var(--card)] text-center p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2">
+                        <img class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" src="https://images.unsplash.com/photo-1550831107-1553da8c8464?q=80&w=2574&auto=format&fit=crop" alt="Dr. Esteban Reinoso">
+                        <h3 class="text-xl font-bold text-[var(--primary)]">Dr. Esteban Reinoso</h3>
+                        <p class="font-semibold text-[var(--muted-foreground)] mb-2">Odontólogo General</p>
+                        <p class="text-sm text-[var(--card-foreground)]">Encargado de evaluaciones iniciales y controles clínicos. Profesional carismático y detallista.</p>
+                    </div>
+                    <div class="bg-[var(--card)] text-center p-6 rounded-lg shadow-lg transition-transform transform hover:-translate-y-2">
+                        <img class="w-24 h-24 rounded-full mx-auto mb-4 object-cover" src="https://images.unsplash.com/photo-1580281658223-9b93f14ae9fe?q=80&w=2574&auto=format&fit=crop" alt="Dra. Ana Lucía Mejía">
+                        <h3 class="text-xl font-bold text-[var(--primary)]">Dra. Ana Lucía Mejía</h3>
+                        <p class="font-semibold text-[var(--muted-foreground)] mb-2">Higienista y Control</p>
+                        <p class="text-sm text-[var(--card-foreground)]">Cuida tu sonrisa después del tratamiento. Especialista en limpieza y seguimiento.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ubicacion" class="py-16 sm:py-24 bg-[var(--background)]">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold text-[var(--foreground)] mb-4">Te esperamos en Quevedo</h2>
+                <p class="text-lg text-[var(--muted-foreground)] mb-8">
+                    Visítanos en nuestro espacio moderno, limpio y cómodo, diseñado para tu bienestar.
+                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Quevedo,Ecuador" target="_blank" class="cta-button">
+                    🗺️ Ver Ubicación en Google Maps
+                </a>
+            </div>
+        </section>
+
+        <section id="cta-final" class="py-20 sm:py-28 bg-[var(--primary)] text-center">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-[var(--primary-foreground)]">
+                    No postergues más tu sonrisa.
+                </h2>
+                <p class="mt-4 text-lg text-[var(--primary-foreground)] opacity-90">
+                    Haz clic en el botón y reserva tu cita de evaluación ortodóntica GRATIS hoy mismo.
+                </p>
+                <div class="mt-8">
+                    <a href="https://wa.me/ECUADORPHONE?text=Hola%2C%20quisiera%20agendar%20una%20cita%20de%20valoración%20ortodóntica%20gratuita." target="_blank" class="inline-block text-lg font-bold bg-white text-[var(--primary)] py-3 px-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                        <svg class="w-6 h-6 inline-block mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.387 1.876 6.269l.16.248-1.103 4.029 4.144-1.084.224.135z"/></svg>
+                        Agendar por WhatsApp
+                    </a>
+                </div>
+                <p class="mt-6 text-sm text-[var(--primary-foreground)] opacity-90">
+                    📍 Estamos en Quevedo | ⏰ Horarios amplios | Atención para niños, jóvenes y adultos.
+                </p>
+            </div>
+        </section>
+        
+        <section class="py-12 bg-[var(--secondary)] text-center">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <p class="text-2xl font-bold text-[var(--primary)]">🙌 Tu nueva sonrisa empieza en SmileCare</p>
+                 <p class="mt-2 text-[var(--muted-foreground)]">Ortodoncia con tecnología, experiencia y cariño.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[var(--footer-background)] text-[var(--footer-foreground)] pt-16 pb-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <h3 class="text-xl font-bold mb-4">🦷 SmileCare Quevedo</h3>
+                    <p class="mb-2">Dirección: Av. Principal 123 y Calle Secundaria, Quevedo, Ecuador.</p>
+                    <p class="mb-2">Teléfono: <a href="tel:+593991234567" class="hover:underline">(+593) 99 123 4567</a></p>
+                    <p class="mb-2">Email: <a href="mailto:contacto@smilecare.com" class="hover:underline">contacto@smilecare.com</a></p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#servicios" class="hover:underline opacity-80 hover:opacity-100">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:underline opacity-80 hover:opacity-100">Nosotros</a></li>
+                        <li><a href="#profesionales" class="hover:underline opacity-80 hover:opacity-100">Profesionales</a></li>
+                        <li><a href="#faq" class="hover:underline opacity-80 hover:opacity-100">Preguntas Frecuentes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Síguenos</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" target="_blank" class="hover:opacity-100 opacity-80" aria-label="Facebook">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" class="hover:opacity-100 opacity-80" aria-label="Instagram">
+                             <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.441 1.441 1.441 1.441-.645 1.441-1.441-.645-1.44-1.441-1.44z"/></svg>
+                        </a>
+                        <a href="https://wa.me/ECUADORPHONE?text=Hola%2C%20quisiera%20más%20información." target="_blank" class="hover:opacity-100 opacity-80" aria-label="WhatsApp">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.269.655 4.387 1.876 6.269l.16.248-1.103 4.029 4.144-1.084.224.135z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 border-t border-[var(--border)] opacity-50 pt-8 text-center text-sm">
+                <p>&copy; 2025 SmileCare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqContainer = document.getElementById('faq-accordion');
+            if (faqContainer) {
+                const questions = faqContainer.querySelectorAll('.faq-question');
+
+                questions.forEach(question => {
+                    question.addEventListener('click', () => {
+                        const answer = question.nextElementSibling;
+                        const icon = question.querySelector('svg');
+
+                        // Cierra todas las demás respuestas
+                        questions.forEach(q => {
+                            const ans = q.nextElementSibling;
+                            const ic = q.querySelector('svg');
+                            if (q !== question) {
+                                ans.classList.add('hidden');
+                                ic.classList.remove('rotate-180');
+                            }
+                        });
+
+                        // Abre o cierra la respuesta actual
+                        answer.classList.toggle('hidden');
+                        icon.classList.toggle('rotate-180');
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
