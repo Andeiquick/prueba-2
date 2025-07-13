@@ -1,8 +1,10 @@
+// Menú responsive
 function toggleMenu() {
   const menu = document.getElementById("menu");
   menu.classList.toggle("active");
 }
 
+// Slider de testimonios
 let currentSlide = 0;
 
 function moveTestimonial(step) {
