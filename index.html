@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SmileCare - Odontología Profesional</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
 </head>
 <body>
@@ -56,35 +56,36 @@
     </div>
   </section>
 
-  <!-- Testimonios con imágenes -->
- <section id="testimonios" class="testimonials">
-  <h2>Lo que dicen nuestros pacientes</h2>
-  <div class="testimonial-slider">
-    <div class="slide active">
-      <div class="testimonial-card">
-        <img src="https://randomuser.me/api/portraits/women/44.jpg " alt="Laura M." class="testimonial-img">
-        <p>"Me encantó la atención recibida. El trato fue muy cercano y me explicaron todo al detalle."</p>
-        <strong>- Laura M., Madrid</strong>
+  <!-- Testimonios con slider -->
+  <section id="testimonios" class="testimonials">
+    <h2>Lo que dicen nuestros pacientes</h2>
+    <div class="testimonial-slider">
+      <div class="slide active">
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg " alt="Laura M." class="testimonial-img">
+          <p>"Me encantó la atención recibida. El trato fue muy cercano y me explicaron todo al detalle."</p>
+          <strong>- Laura M., Madrid</strong>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg " alt="Andrés R." class="testimonial-img">
+          <p>"Después de años buscando una solución para mis dientes, encontré SmileCare. Fue la mejor decisión."</p>
+          <strong>- Andrés R., Barcelona</strong>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="testimonial-card">
+          <img src="https://randomuser.me/api/portraits/women/72.jpg " alt="Sofía G." class="testimonial-img">
+          <p>"Trato humano, profesionalismo y excelentes instalaciones. Me sentí seguro desde el primer momento."</p>
+          <strong>- Sofía G., Valencia</strong>
+        </div>
       </div>
     </div>
-    <div class="slide">
-      <div class="testimonial-card">
-        <img src="https://randomuser.me/api/portraits/men/32.jpg " alt="Andrés R." class="testimonial-img">
-        <p>"Después de años buscando una solución para mis dientes, encontré SmileCare. Fue la mejor decisión."</p>
-        <strong>- Andrés R., Barcelona</strong>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="testimonial-card">
-        <img src="https://randomuser.me/api/portraits/women/72.jpg " alt="Sofía G." class="testimonial-img">
-        <p>"Trato humano, profesionalismo y excelentes instalaciones. Me sentí seguro desde el primer momento."</p>
-        <strong>- Sofía G., Valencia</strong>
-      </div>
-    </div>
-  </div>
-  <button class="prev" onclick="moveTestimonial(-1)">❮</button>
-  <button class="next" onclick="moveTestimonial(1)">❯</button>
-</section>
+    <button class="prev" onclick="moveTestimonial(-1)">❮</button>
+    <button class="next" onclick="moveTestimonial(1)">❯</button>
+  </section>
+
   <!-- Mapa Google Maps -->
   <section class="map-section">
     <h2>Encuéntranos</h2>
@@ -118,6 +119,6 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
