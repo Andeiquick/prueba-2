@@ -135,6 +135,113 @@ body {
 .next { right: 10px; }
 .prev { left: 10px; }
 
+/* Servicios */
+.services {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: white;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+}
+
+.card {
+  background: #f1f8e9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Testimonios con slider */
+.testimonials {
+  padding: 4rem 2rem;
+  background: #e3f2fd;
+  text-align: center;
+}
+
+.testimonial-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.testimonial-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  height: 200px;
+}
+
+.testimonial {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: all 0.5s ease;
+  width: 100%;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.testimonial.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.testi-prev,
+.testi-next {
+  font-size: 2rem;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Contacto */
+.contact {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: white;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact input, .contact textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #0d47a1;
+  color: white;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .navbar ul {
