@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clinica Dental SmileCare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- Header / Menú -->
+  <header class="navbar">
+    <div class="logo">Smile<span>Care</span></div>
+    <nav id="menu">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <!-- Sección Principal -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Una sonrisa perfecta comienza aquí</h1>
+      <p>Tu salud dental es nuestra prioridad. Brindamos atención integral con tecnología avanzada.</p>
+      <a href="#contacto" class="btn-cta">Agenda tu cita ahora</a>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Limpieza Profesional</h3>
+        <p>Eliminación de placa y sarro con técnicas modernas y sin dolor.</p>
+      </div>
+      <div class="card">
+        <h3>Blanqueamiento Dental</h3>
+        <p>Logra una sonrisa más blanca y brillante en una sola sesión.</p>
+      </div>
+      <div class="card">
+        <h3>Implantes Dentales</h3>
+        <p>Soluciones permanentes para la pérdida de dientes con resultados naturales.</p>
+      </div>
+      <div class="card">
+        <h3>Ortodoncia Invisalign</h3>
+        <p>Alineadores transparentes para corregir tu sonrisa sin aparatos visibles.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section id="testimonios" class="testimonials">
+    <h2>Lo que dicen nuestros pacientes</h2>
+    <div class="testimonial-box">
+      <p>"Excelente servicio. Me sentí muy cómoda y el resultado fue increíble."</p>
+      <strong>- María S.</strong>
+    </div>
+    <div class="testimonial-box">
+      <p>"La mejor experiencia dental que he tenido. Muy profesionales y amables."</p>
+      <strong>- Carlos R.</strong>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes preguntas o deseas agendar una cita? ¡Escríbenos!</p>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu correo electrónico" required />
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit" class="btn-cta">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SmileCare Odontología. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
