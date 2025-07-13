@@ -7,7 +7,7 @@ body {
 }
 
 .hero-bg {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1920&q=80');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1593344484962-796b16d8a976?q=80&w=1920&auto=format&fit=crop');
 }
 
 .logo-accent { 
@@ -19,7 +19,7 @@ body {
 }
 
 .bg-secondary { 
-    background-color: #e3f2fd; 
+    background-color: #f0f7ff; /* Un azul muy claro y suave */
 }
 
 .btn-cta {
@@ -37,9 +37,19 @@ body {
 
 .whatsapp-button {
     background-color: #25d366;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .whatsapp-button:hover { 
-    background-color: #1ebf5b; 
+    background-color: #1ebf5b;
+    transform: scale(1.1);
 }
+
+/* Estilo para que toda la tarjeta de servicio sea un enlace sin la decoración de texto azul */
+.service-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
