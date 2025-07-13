@@ -35,26 +35,40 @@
 
   <!-- Servicios -->
   <section id="servicios" class="services">
-    <h2>Nuestros Servicios</h2>
-    <div class="cards">
-      <div class="card">
+  <h2>Nuestros Servicios</h2>
+  <div class="service-slider">
+    <div class="slide active">
+      <div class="service-card">
+        <i class="fas fa-broom-dollar service-icon"></i>
         <h3>Limpieza Profesional</h3>
         <p>Eliminación de placa y sarro con técnicas modernas y sin dolor.</p>
       </div>
-      <div class="card">
+    </div>
+    <div class="slide">
+      <div class="service-card">
+        <i class="fas fa-tooth service-icon"></i>
         <h3>Blanqueamiento Dental</h3>
         <p>Logra una sonrisa más blanca y brillante en una sola sesión.</p>
       </div>
-      <div class="card">
+    </div>
+    <div class="slide">
+      <div class="service-card">
+        <i class="fas fa-seedling service-icon"></i>
         <h3>Implantes Dentales</h3>
         <p>Soluciones permanentes para la pérdida de dientes con resultados naturales.</p>
       </div>
-      <div class="card">
+    </div>
+    <div class="slide">
+      <div class="service-card">
+        <i class="fas fa-align-justify service-icon"></i>
         <h3>Ortodoncia Invisalign</h3>
         <p>Alineadores transparentes para corregir tu sonrisa sin aparatos visibles.</p>
       </div>
     </div>
-  </section>
+  </div>
+  <button class="prev" onclick="moveService(-1)">❮</button>
+  <button class="next" onclick="moveService(1)">❯</button>
+</section>
 
   <!-- Testimonios con slider -->
   <section id="testimonios" class="testimonials">
