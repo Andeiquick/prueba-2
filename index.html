@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SmileCare - Odontología Profesional</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
 </head>
 <body>
@@ -33,42 +33,42 @@
     </div>
   </section>
 
-  <!-- Servicios -->
+  <!-- Servicios con slider -->
   <section id="servicios" class="services">
-  <h2>Nuestros Servicios</h2>
-  <div class="service-slider">
-    <div class="slide active">
-      <div class="service-card">
-        <i class="fas fa-broom-dollar service-icon"></i>
-        <h3>Limpieza Profesional</h3>
-        <p>Eliminación de placa y sarro con técnicas modernas y sin dolor.</p>
+    <h2>Nuestros Servicios</h2>
+    <div class="service-slider">
+      <div class="slide active">
+        <div class="service-card">
+          <img src="https://images.unsplash.com/photo-1593642702821-c0da1f2eb723?auto=format&fit=crop&w=1632&q=80" alt="Limpieza Profesional" class="service-image">
+          <h3>Limpieza Profesional</h3>
+          <p>Eliminación de placa y sarro con técnicas modernas y sin dolor.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="service-card">
+          <img src=" https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1600&q=80" alt="Blanqueamiento Dental" class="service-image">
+          <h3>Blanqueamiento Dental</h3>
+          <p>Logra una sonrisa más blanca y brillante en una sola sesión.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="service-card">
+          <img src=" https://images.unsplash.com/photo-1586825072582-8e4c65b2b29f?auto=format&fit=crop&w=1600&q=80" alt="Implantes Dentales" class="service-image">
+          <h3>Implantes Dentales</h3>
+          <p>Soluciones permanentes para la pérdida de dientes con resultados naturales.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="service-card">
+          <img src=" https://images.unsplash.com/photo-1587229450-3080-fdfbfa6b0923?auto=format&fit=crop&w=1650&q=80" alt="Ortodoncia Invisalign" class="service-image">
+          <h3>Ortodoncia Invisalign</h3>
+          <p>Alineadores transparentes para corregir tu sonrisa sin aparatos visibles.</p>
+        </div>
       </div>
     </div>
-    <div class="slide">
-      <div class="service-card">
-        <i class="fas fa-tooth service-icon"></i>
-        <h3>Blanqueamiento Dental</h3>
-        <p>Logra una sonrisa más blanca y brillante en una sola sesión.</p>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="service-card">
-        <i class="fas fa-seedling service-icon"></i>
-        <h3>Implantes Dentales</h3>
-        <p>Soluciones permanentes para la pérdida de dientes con resultados naturales.</p>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="service-card">
-        <i class="fas fa-align-justify service-icon"></i>
-        <h3>Ortodoncia Invisalign</h3>
-        <p>Alineadores transparentes para corregir tu sonrisa sin aparatos visibles.</p>
-      </div>
-    </div>
-  </div>
-  <button class="prev" onclick="moveService(-1)">❮</button>
-  <button class="next" onclick="moveService(1)">❯</button>
-</section>
+    <button class="prev" onclick="moveService(-1)">❮</button>
+    <button class="next" onclick="moveService(1)">❯</button>
+  </section>
 
   <!-- Testimonios con slider -->
   <section id="testimonios" class="testimonials">
@@ -76,7 +76,7 @@
     <div class="testimonial-slider">
       <div class="slide active">
         <div class="testimonial-card">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg " alt="Laura M." class="testimonial-img">
+          <img src=" https://randomuser.me/api/portraits/women/44.jpg " alt="Laura M." class="testimonial-img">
           <p>"Me encantó la atención recibida. El trato fue muy cercano y me explicaron todo al detalle."</p>
           <strong>- Laura M., Madrid</strong>
         </div>
@@ -133,6 +133,6 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
