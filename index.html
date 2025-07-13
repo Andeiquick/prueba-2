@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SmileCare - Odontología Profesional</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
 </head>
 <body>
 
@@ -14,37 +15,22 @@
     <div class="logo">Smile<span>Care</span></div>
     <nav id="menu">
       <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#testimonios">Testimonios</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#inicio"><i class="fas fa-home"></i> Inicio</a></li>
+        <li><a href="#servicios"><i class="fas fa-tooth"></i> Servicios</a></li>
+        <li><a href="#testimonios"><i class="fas fa-users"></i> Testimonios</a></li>
+        <li><a href="#contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
       </ul>
     </nav>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
   </header>
 
-  <!-- Carrusel / Banner -->
-  <section id="inicio" class="hero-slider">
-    <div class="slides">
-      <div class="slide active">
-        <img src=" https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1600&q=80" alt="Banner 1">
-        <div class="slide-text">
-          <h1>Tu sonrisa perfecta empieza aquí</h1>
-          <p>Atención personalizada, tecnología avanzada y resultados naturales.</p>
-          <a href="#contacto" class="btn-cta">Agenda tu cita ahora</a>
-        </div>
-      </div>
-      <div class="slide">
-        <img src=" https://images.unsplash.com/photo-1586825072582-8e4c65b2b29f?auto=format&fit=crop&w=1600&q=80" alt="Banner 2">
-        <div class="slide-text">
-          <h1>Diseña tu nueva sonrisa</h1>
-          <p>Blanqueamiento, implantes, ortodoncia y más. ¡Todo en un solo lugar!</p>
-          <a href="#servicios" class="btn-cta">Ver servicios</a>
-        </div>
-      </div>
+  <!-- Banner Original -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Tu sonrisa perfecta empieza aquí</h1>
+      <p>Atención personalizada, tecnología avanzada y resultados naturales.</p>
+      <a href="#contacto" class="btn-cta">Agenda tu cita ahora</a>
     </div>
-    <button class="prev" onclick="moveSlide(-1)">❮</button>
-    <button class="next" onclick="moveSlide(1)">❯</button>
   </section>
 
   <!-- Servicios -->
@@ -70,30 +56,36 @@
     </div>
   </section>
 
-  <!-- Testimonios con slider -->
+  <!-- Testimonios con imágenes -->
   <section id="testimonios" class="testimonials">
     <h2>Lo que dicen nuestros pacientes</h2>
-    <div class="testimonial-slider">
-      <button class="testi-prev" onclick="prevTestimonial()">❮</button>
-      <div class="testimonial-container">
-        <div class="testimonial active">
-          <p>"Me encantó la atención recibida. El trato fue muy cercano y me explicaron todo al detalle. ¡Mi sonrisa nunca se vio mejor!"</p>
-          <strong>- Laura M., Madrid</strong>
-        </div>
-        <div class="testimonial">
-          <p>"Después de años buscando una solución para mis dientes, encontré SmileCare. Fue la mejor decisión que pude tomar."</p>
-          <strong>- Andrés R., Barcelona</strong>
-        </div>
-        <div class="testimonial">
-          <p>"Trato humano, profesionalismo y excelentes instalaciones. Me sentí seguro desde el primer momento."</p>
-          <strong>- Sofía G., Valencia</strong>
-        </div>
-        <div class="testimonial">
-          <p>"El proceso de blanqueamiento fue rápido y sin molestias. ¡Quedé encantada con el resultado!"</p>
-          <strong>- Clara D., Sevilla</strong>
-        </div>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg " alt="Laura M." class="testimonial-img">
+        <p>"Me encantó la atención recibida. El trato fue muy cercano y me explicaron todo al detalle."</p>
+        <strong>- Laura M., Madrid</strong>
       </div>
-      <button class="testi-next" onclick="nextTestimonial()">❯</button>
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg " alt="Andrés R." class="testimonial-img">
+        <p>"Después de años buscando una solución para mis dientes, encontré SmileCare. Fue la mejor decisión."</p>
+        <strong>- Andrés R., Barcelona</strong>
+      </div>
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/women/72.jpg " alt="Sofía G." class="testimonial-img">
+        <p>"Trato humano, profesionalismo y excelentes instalaciones. Me sentí seguro desde el primer momento."</p>
+        <strong>- Sofía G., Valencia</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mapa Google Maps -->
+  <section class="map-section">
+    <h2>Encuéntranos</h2>
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.096662457694!2d-122.41941548468125!3d37.7749292797598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c8a0d0f6d%3A0x5fd531521f95d49e!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2ses!4v1614958607997!5m2!1sen!2ses" 
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
     </div>
   </section>
 
@@ -101,10 +93,10 @@
   <section id="contacto" class="contact">
     <h2>Contáctanos</h2>
     <p>¿Tienes preguntas o deseas agendar una cita? ¡Escríbenos!</p>
-    <form onsubmit="submitForm(event)">
-      <input type="text" placeholder="Tu nombre" required />
-      <input type="email" placeholder="Tu correo electrónico" required />
-      <textarea placeholder="Tu mensaje" required></textarea>
+    <form action=" https://formspree.io/f/YOUR_FORM_ID " method="POST">
+      <input type="text" name="name" placeholder="Tu nombre" required />
+      <input type="email" name="email" placeholder="Tu correo electrónico" required />
+      <textarea name="message" placeholder="Tu mensaje" required></textarea>
       <button type="submit" class="btn-cta">Enviar Mensaje</button>
     </form>
   </section>
@@ -114,6 +106,11 @@
     <p>&copy; 2025 SmileCare Odontología. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="index.js"></script>
+  <!-- WhatsApp Flotante -->
+  <a href="https://wa.me/1234567890 " class="whatsapp-button" target="_blank" aria-label="Contacto por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
