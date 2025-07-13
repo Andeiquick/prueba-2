@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Clinica Dental SmileCare</title>
+  <title>SmileCare - Odontología Profesional</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header / Menú -->
+  <!-- Menú -->
   <header class="navbar">
     <div class="logo">Smile<span>Care</span></div>
     <nav id="menu">
@@ -23,13 +23,28 @@
     <button class="hamburger" onclick="toggleMenu()">☰</button>
   </header>
 
-  <!-- Sección Principal -->
-  <section id="inicio" class="hero">
-    <div class="hero-content">
-      <h1>Una sonrisa perfecta comienza aquí</h1>
-      <p>Tu salud dental es nuestra prioridad. Brindamos atención integral con tecnología avanzada.</p>
-      <a href="#contacto" class="btn-cta">Agenda tu cita ahora</a>
+  <!-- Carrusel / Banner -->
+  <section id="inicio" class="hero-slider">
+    <div class="slides">
+      <div class="slide active">
+        <img src=" https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=1600&q=80" alt="Banner 1">
+        <div class="slide-text">
+          <h1>Tu sonrisa nos inspira</h1>
+          <p>Brindamos atención integral con tecnología avanzada.</p>
+          <a href="#contacto" class="btn-cta">Agenda tu cita ahora</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src=" https://images.unsplash.com/photo-1586825072582-8e4c65b2b29f?auto=format&fit=crop&w=1600&q=80" alt="Banner 2">
+        <div class="slide-text">
+          <h1>Diseña tu nueva sonrisa</h1>
+          <p>Blanqueamiento, implantes, ortodoncia y más.</p>
+          <a href="#servicios" class="btn-cta">Ver servicios</a>
+        </div>
+      </div>
     </div>
+    <button class="prev" onclick="moveSlide(-1)">❮</button>
+    <button class="next" onclick="moveSlide(1)">❯</button>
   </section>
 
   <!-- Servicios -->
@@ -85,6 +100,6 @@
     <p>&copy; 2025 SmileCare Odontología. Todos los derechos reservados.</p>
   </footer>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
