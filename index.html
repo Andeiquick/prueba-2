@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SmileCare - Odontología Profesional</title>
+    <title>SmileCare - Recupera la Confianza en tu Sonrisa</title>
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind CSS (requiere conexión a internet) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Google Fonts: Poppins -->
@@ -13,10 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
+    <!-- Font Awesome (para los iconos) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Hoja de Estilos Personalizada -->
+    <!-- ** IMPORTANTE: Aquí se conecta con tu archivo de estilos CSS ** -->
     <link rel="stylesheet" href="index.css">
 </head>
 <body class="bg-gray-50">
@@ -26,10 +26,10 @@
         <div class="container mx-auto flex justify-between items-center">
             <a href="#inicio" class="text-2xl font-bold">Smile<span class="logo-accent">Care</span></a>
             <nav class="hidden md:flex items-center space-x-6">
-                <a href="#inicio" class="nav-link transition-colors duration-300"><i class="fas fa-home mr-1"></i> Inicio</a>
-                <a href="#servicios" class="nav-link transition-colors duration-300"><i class="fas fa-tooth mr-1"></i> Servicios</a>
-                <a href="#testimonios" class="nav-link transition-colors duration-300"><i class="fas fa-users mr-1"></i> Testimonios</a>
-                <a href="#contacto" class="nav-link transition-colors duration-300"><i class="fas fa-envelope mr-1"></i> Contacto</a>
+                <a href="#beneficios" class="nav-link transition-colors duration-300">Beneficios</a>
+                <a href="#servicios" class="nav-link transition-colors duration-300">Servicios</a>
+                <a href="#testimonios" class="nav-link transition-colors duration-300">Testimonios</a>
+                <a href="#contacto" class="nav-link transition-colors duration-300">Contacto</a>
             </nav>
             <button id="hamburger-button" class="md:hidden text-2xl">
                 <i class="fas fa-bars"></i>
@@ -38,56 +38,102 @@
         <!-- Menú Móvil -->
         <div id="mobile-menu" class="hidden md:hidden mt-4">
             <nav class="flex flex-col space-y-4">
-                <a href="#inicio" class="nav-link transition-colors duration-300"><i class="fas fa-home mr-2"></i>Inicio</a>
-                <a href="#servicios" class="nav-link transition-colors duration-300"><i class="fas fa-tooth mr-2"></i>Servicios</a>
-                <a href="#testimonios" class="nav-link transition-colors duration-300"><i class="fas fa-users mr-2"></i>Testimonios</a>
-                <a href="#contacto" class="nav-link transition-colors duration-300"><i class="fas fa-envelope mr-2"></i>Contacto</a>
+                <a href="#beneficios" class="nav-link transition-colors duration-300">Beneficios</a>
+                <a href="#servicios" class="nav-link transition-colors duration-300">Servicios</a>
+                <a href="#testimonios" class="nav-link transition-colors duration-300">Testimonios</a>
+                <a href="#contacto" class="nav-link transition-colors duration-300">Contacto</a>
             </nav>
         </div>
     </header>
 
     <main>
         <!-- Sección Hero (Banner) -->
-        <section id="inicio" class="hero-bg bg-cover bg-center h-[90vh] flex items-center justify-center text-white text-center">
-            <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Tu sonrisa perfecta aqui</h1>
-                <p class="text-lg md:text-xl mb-8">Atención personalizada, tecnología avanzada.</p>
-                <a href="#contacto" class="btn-cta text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                    Agenda tu cita ahora
-                </a>
+        <section id="inicio" class="hero-bg bg-cover bg-center min-h-[90vh] flex items-center">
+            <div class="container mx-auto px-6 text-center md:text-left text-white">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Recupera la Confianza en tu Sonrisa</h1>
+                    <p class="text-lg md:text-xl mb-8">Combinamos arte, ciencia y atención personalizada para diseñar la sonrisa que siempre has deseado. Tu bienestar es nuestra prioridad.</p>
+                    <a href="https://wa.me/1234567890?text=Hola,%20me%20gustaría%20agendar%20una%20valoración%20inicial." target="_blank" class="btn-cta text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 inline-block">
+                        <i class="fab fa-whatsapp mr-2"></i> Agendar Valoración Inicial
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Beneficios / Por Qué Elegirnos -->
+        <section id="beneficios" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">La Experiencia SmileCare</h2>
+                <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">Más que una clínica dental, somos tus aliados en salud y estética. Descubre por qué nuestros pacientes nos confían su sonrisa.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                    <!-- Beneficio 1 -->
+                    <div class="p-6">
+                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-microchip"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Tecnología de Vanguardia</h3>
+                        <p>Utilizamos equipos de última generación para diagnósticos precisos y tratamientos más cómodos, rápidos y efectivos.</p>
+                    </div>
+                    <!-- Beneficio 2 -->
+                    <div class="p-6">
+                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-user-tie"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Expertos Apasionados</h3>
+                        <p>Nuestro equipo está en constante formación para ofrecerte las técnicas más innovadoras con un trato cálido y humano.</p>
+                    </div>
+                    <!-- Beneficio 3 -->
+                    <div class="p-6">
+                        <div class="text-5xl text-blue-500 mb-4"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Atención 100% Personalizada</h3>
+                        <p>No hay dos sonrisas iguales. Diseñamos un plan de tratamiento a tu medida, escuchando tus necesidades y objetivos.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Sección de Servicios -->
-        <section id="servicios" class="py-16 md:py-24 bg-white">
+        <section id="servicios" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Nuestros Servicios</h2>
-                <!-- Grid responsivo para los servicios -->
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Transforma tu Sonrisa con Nuestros Servicios</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Tarjeta de Servicio 1 -->
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src=".1.png" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Dentista realizando una limpieza profesional" class="w-full h-48 object-cover rounded-md mb-6">
-                        <h3 class="text-xl font-bold mb-2">Limpieza Profesional</h3>
-                        <p>Eliminación de placa y sarro con técnicas modernas y sin dolor.</p>
-                    </div>
-                    <!-- Tarjeta de Servicio 2 -->
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="2.png" alt="Sonrisa blanca y brillante después de un blanqueamiento" class="w-full h-48 object-cover rounded-md mb-6">
-                        <h3 class="text-xl font-bold mb-2">Blanqueamiento Dental</h3>
-                        <p>Logra una sonrisa más blanca y brillante en una sola sesión.</p>
-                    </div>
-                    <!-- Tarjeta de Servicio 3 -->
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="3.png" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Modelo de un implante dental" class="w-full h-48 object-cover rounded-md mb-6">
-                        <h3 class="text-xl font-bold mb-2">Implantes Dentales</h3>
-                        <p>Soluciones permanentes para la pérdida de dientes con resultados naturales.</p>
-                    </div>
-                    <!-- Tarjeta de Servicio 4 -->
-                    <div class="bg-gray-100 p-6 rounded-lg shadow-md flex flex-col items-center text-center transform hover:-translate-y-2 transition-transform duration-300">
-                        <img src="4.png"this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Alineadores de ortodoncia invisible" class="w-full h-48 object-cover rounded-md mb-6">
-                        <h3 class="text-xl font-bold mb-2">Ortodoncia Invisalign</h3>
-                        <p>Alineadores transparentes para corregir tu sonrisa sin aparatos visibles.</p>
-                    </div>
+                    <!-- Tarjeta de Servicio como un enlace a WhatsApp -->
+                    <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20consultar%20sobre%20el%20servicio%20de%20Limpieza%20Profesional." target="_blank" class="service-card-link">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1629905675717-8c18c930a82b?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Dentista realizando una limpieza profesional" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Limpieza Profesional</h3>
+                                <p class="text-gray-600 mb-4 flex-grow">Mantén tu sonrisa radiante y previene problemas futuros. La base de una salud bucal perfecta.</p>
+                                <span class="font-bold text-blue-600 mt-auto">Consultar por WhatsApp <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20consultar%20sobre%20el%20servicio%20de%20Blanqueamiento%20Dental." target="_blank" class="service-card-link">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1619451428368-831a58759a28?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Sonrisa blanca y brillante después de un blanqueamiento" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Blanqueamiento Dental</h3>
+                                <p class="text-gray-600 mb-4 flex-grow">Deslumbra con una sonrisa visiblemente más blanca y joven en una sola sesión.</p>
+                                <span class="font-bold text-blue-600 mt-auto">Consultar por WhatsApp <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20consultar%20sobre%20el%20servicio%20de%20Implantes%20Dentales." target="_blank" class="service-card-link">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1588776814546-da6316ac9152?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Modelo de un implante dental" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Implantes Dentales</h3>
+                                <p class="text-gray-600 mb-4 flex-grow">La solución definitiva y de aspecto natural para reemplazar dientes perdidos y sonreír sin límites.</p>
+                                <span class="font-bold text-blue-600 mt-auto">Consultar por WhatsApp <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/1234567890?text=Hola,%20quisiera%20consultar%20sobre%20el%20servicio%20de%20Ortodoncia%20Invisible." target="_blank" class="service-card-link">
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden h-full flex flex-col transform hover:-translate-y-2 transition-transform duration-300">
+                            <img src="https://images.unsplash.com/photo-1617852909398-31cad3d2b2a0?q=80&w=800&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://placehold.co/400x250/EFEFEF/333?text=Imagen+no+disponible';" alt="Alineadores de ortodoncia invisible" class="w-full h-48 object-cover">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <h3 class="text-xl font-bold mb-2">Ortodoncia Invisible</h3>
+                                <p class="text-gray-600 mb-4 flex-grow">Corrige la posición de tus dientes de la forma más discreta, cómoda y moderna.</p>
+                                <span class="font-bold text-blue-600 mt-auto">Consultar por WhatsApp <i class="fas fa-arrow-right ml-1"></i></span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -95,99 +141,82 @@
         <!-- Sección de Testimonios -->
         <section id="testimonios" class="py-16 md:py-24 bg-secondary">
             <div class="container mx-auto text-center px-6">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12">Lo que dicen nuestros pacientes</h2>
-                <div id="testimonial-slider" class="relative">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">Pacientes que Vuelven a Sonreír</h2>
+                <div id="testimonial-slider" class="relative max-w-3xl mx-auto">
                     <!-- Slides de Testimonios -->
                     <div class="testimonial-slide">
-                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto text-center">
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
                             <img src="https://randomuser.me/api/portraits/women/44.jpg" onerror="this.onerror=null;this.src='https://placehold.co/80x80/EFEFEF/333?text=:)';" alt="Laura M." class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-blue-200">
-                            <p class="text-gray-600 italic mb-4">"Me encantó la atención recibida. El trato fue muy cercano y me explicaron todo al detalle."</p>
-                            <strong class="text-gray-800">- Laura M., Madrid</strong>
+                            <p class="text-gray-600 italic mb-4">"El equipo de SmileCare no solo me devolvió la sonrisa, sino la confianza para mostrarla. El trato fue increíblemente humano y profesional. ¡Gracias!"</p>
+                            <strong class="text-gray-800">- Laura M., Paciente de Implantes</strong>
                         </div>
                     </div>
                     <div class="testimonial-slide hidden">
-                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto text-center">
+                        <div class="bg-white p-8 rounded-lg shadow-lg text-center">
                             <img src="https://randomuser.me/api/portraits/men/32.jpg" onerror="this.onerror=null;this.src='https://placehold.co/80x80/EFEFEF/333?text=:)';" alt="Andrés R." class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-blue-200">
-                            <p class="text-gray-600 italic mb-4">"Después de años buscando una solución para mis dientes, encontré SmileCare. Fue la mejor decisión."</p>
-                            <strong class="text-gray-800">- Andrés R., Barcelona</strong>
-                        </div>
-                    </div>
-                    <div class="testimonial-slide hidden">
-                        <div class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto text-center">
-                            <img src="https://randomuser.me/api/portraits/women/72.jpg" onerror="this.onerror=null;this.src='https://placehold.co/80x80/EFEFEF/333?text=:)';" alt="Sofía G." class="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-blue-200">
-                            <p class="text-gray-600 italic mb-4">"Trato humano, profesionalismo y excelentes instalaciones. Me sentí seguro desde el primer momento."</p>
-                            <strong class="text-gray-800">- Sofía G., Valencia</strong>
+                            <p class="text-gray-600 italic mb-4">"Mi tratamiento de ortodoncia invisible fue mucho más rápido y cómodo de lo que imaginé. Estoy feliz con los resultados. ¡Totalmente recomendados!"</p>
+                            <strong class="text-gray-800">- Andrés R., Paciente de Ortodoncia</strong>
                         </div>
                     </div>
                     <!-- Controles del Slider -->
-                    <button class="slider-prev absolute top-1/2 left-0 md:-left-8 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md transition-all">
+                    <button class="slider-prev absolute top-1/2 -left-4 md:-left-12 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md transition-all">
                         <i class="fas fa-chevron-left text-gray-700 h-6 w-6"></i>
                     </button>
-                    <button class="slider-next absolute top-1/2 right-0 md:-right-8 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md transition-all">
+                    <button class="slider-next absolute top-1/2 -right-4 md:-right-12 transform -translate-y-1/2 bg-white bg-opacity-70 hover:bg-opacity-100 rounded-full p-2 shadow-md transition-all">
                         <i class="fas fa-chevron-right text-gray-700 h-6 w-6"></i>
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Mapa -->
-        <section class="py-16 md:py-24 bg-white">
-            <div class="container mx-auto text-center px-6">
-                <h2 class="text-3xl md:text-4xl font-bold mb-12">Encuéntranos</h2>
-                <div class="map-container rounded-lg overflow-hidden shadow-2xl border-4 border-white">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.096662457694!2d-122.41941548468125!3d37.7749292797598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c8a0d0f6d%3A0x5fd531521f95d49e!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2ses!4v1614958607997!5m2!1sen!2ses" 
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+        <!-- Sección de Contacto y Mapa -->
+        <section id="contacto" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 text-center">Da el Primer Paso Hacia tu Mejor Sonrisa</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Formulario -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Envíanos un Mensaje</h3>
+                        <p class="text-gray-600 mb-6">Si tienes alguna duda o prefieres escribirnos, completa el formulario. Te responderemos a la brevedad.</p>
+                        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                            <input type="text" name="name" placeholder="Tu nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
+                            <input type="email" name="email" placeholder="Tu correo electrónico" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
+                            <textarea name="message" placeholder="Tu mensaje" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"></textarea>
+                            <button type="submit" class="btn-cta w-full text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-xl transition-all duration-300">
+                                Enviar Mensaje
+                            </button>
+                        </form>
+                    </div>
+                    <!-- Mapa e Info -->
+                    <div>
+                         <h3 class="text-2xl font-bold mb-2">Visítanos</h3>
+                        <p class="text-gray-600 mb-6">Encuéntranos en el corazón de la ciudad. Estamos listos para recibirte.</p>
+                        <div class="map-container rounded-lg overflow-hidden shadow-lg">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.096662457694!2d-122.41941548468125!3d37.7749292797598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c8a0d0f6d%3A0x5fd531521f95d49e!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2ses!4v1614958607997!5m2!1sen!2ses" 
+                                width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de Contacto -->
-        <section id="contacto" class="py-16 md:py-24 bg-gray-50">
-            <div class="container mx-auto text-center px-6">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contáctanos</h2>
-                <p class="text-lg text-gray-600 mb-8">¿Tienes preguntas o deseas agendar una cita? ¡Escríbenos!</p>
-                <!-- NOTA: Reemplaza YOUR_FORM_ID con tu ID de Formspree -->
-                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="max-w-xl mx-auto text-left">
-                    <div class="mb-4">
-                        <label for="name" class="block text-gray-700 font-bold mb-2">Nombre</label>
-                        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="tu.correo@ejemplo.com" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all">
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block text-gray-700 font-bold mb-2">Mensaje</label>
-                        <textarea id="message" name="message" placeholder="Escribe tu consulta aquí..." rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-all"></textarea>
-                    </div>
-                    <div class="text-center">
-                        <button type="submit" class="btn-cta text-white font-bold py-3 px-8 rounded-lg text-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300">
-                            Enviar Mensaje
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary text-white text-center p-6">
-        <p>&copy; <span id="year"></span> SmileCare Odontología. Todos los derechos reservados.</p>
+    <footer class="bg-primary text-white text-center p-8">
+        <p class="font-bold text-lg">SmileCare Odontología</p>
+        <p>&copy; <span id="year"></span> Todos los derechos reservados.</p>
     </footer>
 
     <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/1234567890" class="whatsapp-button fixed bottom-5 right-5 w-14 h-14 rounded-full flex items-center justify-center text-white text-3xl shadow-lg z-40" target="_blank" aria-label="Contacto por WhatsApp">
+    <a href="https://wa.me/1234567890?text=Hola,%20me%20gustaría%20agendar%20una%20valoración." target="_blank" class="whatsapp-button fixed bottom-5 right-5 w-16 h-16 rounded-full flex items-center justify-center text-white text-4xl shadow-lg z-40" aria-label="Contacto por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <!-- Script de JavaScript -->
+    <!-- ** IMPORTANTE: Aquí se conecta con tu archivo de JavaScript ** -->
     <script src="index.js" defer></script>
 </body>
 </html>
+
