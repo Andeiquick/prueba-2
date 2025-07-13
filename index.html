@@ -57,27 +57,34 @@
   </section>
 
   <!-- Testimonios con imágenes -->
-  <section id="testimonios" class="testimonials">
-    <h2>Lo que dicen nuestros pacientes</h2>
-    <div class="testimonial-container">
-      <div class="testimonial">
+ <section id="testimonios" class="testimonials">
+  <h2>Lo que dicen nuestros pacientes</h2>
+  <div class="testimonial-slider">
+    <div class="slide active">
+      <div class="testimonial-card">
         <img src="https://randomuser.me/api/portraits/women/44.jpg " alt="Laura M." class="testimonial-img">
         <p>"Me encantó la atención recibida. El trato fue muy cercano y me explicaron todo al detalle."</p>
         <strong>- Laura M., Madrid</strong>
       </div>
-      <div class="testimonial">
+    </div>
+    <div class="slide">
+      <div class="testimonial-card">
         <img src="https://randomuser.me/api/portraits/men/32.jpg " alt="Andrés R." class="testimonial-img">
         <p>"Después de años buscando una solución para mis dientes, encontré SmileCare. Fue la mejor decisión."</p>
         <strong>- Andrés R., Barcelona</strong>
       </div>
-      <div class="testimonial">
+    </div>
+    <div class="slide">
+      <div class="testimonial-card">
         <img src="https://randomuser.me/api/portraits/women/72.jpg " alt="Sofía G." class="testimonial-img">
         <p>"Trato humano, profesionalismo y excelentes instalaciones. Me sentí seguro desde el primer momento."</p>
         <strong>- Sofía G., Valencia</strong>
       </div>
     </div>
-  </section>
-
+  </div>
+  <button class="prev" onclick="moveTestimonial(-1)">❮</button>
+  <button class="next" onclick="moveTestimonial(1)">❯</button>
+</section>
   <!-- Mapa Google Maps -->
   <section class="map-section">
     <h2>Encuéntranos</h2>
