@@ -6,28 +6,23 @@
     <title>SmileCare</title>
     <meta name="description" content="Clínica de ortodoncia avanzada para niños, jóvenes y adultos en Quevedo. Más de 10 años de experiencia creando sonrisas seguras y felices.">
     
-    <!-- Script de Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Enlace a la hoja de estilos externa -->
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body class="bg-white text-slate-700">
 
-   <!-- Encabezado -->
     <header id="header" class="bg-white/90 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
             <a href="#inicio" class="text-2xl font-bold text-slate-800">
                 SmileCare
             </a>
             
-            <!-- Menú de navegación para escritorio -->
             <div class="hidden md:flex space-x-8 items-center text-sm font-medium">
                 <a href="#inicio" class="text-teal-600 hover:text-teal-500 transition-colors duration-300">Inicio</a>
                 <a href="#servicios" class="text-slate-600 hover:text-teal-600 transition-colors duration-300">Servicios</a>
@@ -38,7 +33,6 @@
                 </a>
             </div>
 
-            <!-- Botón del menú móvil -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-slate-700 focus:outline-none">
                     <svg class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
@@ -48,7 +42,6 @@
             </div>
         </nav>
 
-        <!-- Menú desplegable móvil -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
             <a href="#inicio" class="block py-3 px-6 text-slate-600 hover:bg-teal-50 hover:text-teal-600 text-base">Inicio</a>
             <a href="#servicios" class="block py-3 px-6 text-slate-600 hover:bg-teal-50 hover:text-teal-600 text-base">Servicios</a>
@@ -58,16 +51,12 @@
         </div>
     </header>
 
-    <!-- Contenido Principal -->
     <main>
-        <!-- Sección de Inicio (Nuevo Banner) -->
         <section id="inicio" class="animated-section relative h-screen w-full overflow-hidden bg-white grid lg:grid-cols-3">
-            <!-- Panel Izquierdo (Imagen) -->
             <div class="left-panel absolute lg:relative w-full h-full lg:w-auto">
                 <img src="https://images.pexels.com/photos/10260751/pexels-photo-10260751.jpeg" alt="Detalle de una sonrisa saludable" class="w-full h-full object-cover">
             </div>
 
-            <!-- Panel Central (Contenido) -->
             <div class="center-content relative z-10 flex flex-col items-center justify-center text-center p-8 bg-white/80 lg:bg-white backdrop-blur-sm lg:backdrop-blur-none">
                 <div class="overflow-hidden">
                     <h1 class="content-item text-4xl sm:text-5xl font-bold text-slate-800 !leading-tight">
@@ -86,13 +75,11 @@
                 </div>
             </div>
 
-            <!-- Panel Derecho (Imagen) -->
             <div class="right-panel hidden lg:block">
                  <img src="https://images.pexels.com/photos/12637721/pexels-photo-12637721.jpeg" alt="niña sonriendo con seguridad" class="w-full h-full object-cover">
             </div>
         </section>
 
-        <!-- Sección Nosotros -->
         <section id="nosotros" class="py-20 lg:py-28 bg-white">
             <div class="container mx-auto px-6 max-w-7xl grid md:grid-cols-2 gap-12 items-center fade-in-section">
                 <div class="order-2 md:order-1">
@@ -100,10 +87,10 @@
                         Una sonrisa alineada transforma tu vida
                     </h2>
                     <p class="mt-6 text-base md:text-lg text-slate-600">
-                       En SmileCare, una sonrisa alineada mejora tu imagen, tu salud y tu confianza.
+                        En SmileCare, una sonrisa alineada mejora tu imagen, tu salud y tu confianza.
                     </p>
                     <p class="mt-4 text-base md:text-lg text-slate-600">
-                       Con más de 10 años de experiencia en Quevedo, en SmileCare ofrecemos ortodoncia para todas las edades, con tecnología avanzada, especialistas calificados y un trato cercano desde el primer día
+                        Con más de 10 años de experiencia en Quevedo, en SmileCare ofrecemos ortodoncia para todas las edades, con tecnología avanzada, especialistas calificados y un trato cercano desde el primer día
                     </p>
                     <div class="mt-8">
                         <a href="https://wa.me/593981653921?text=Hola%2C%20quisiera%20agendar%20una%20cita%20en%20SmileCare" class="inline-flex items-center text-[#ea8c04] font-semibold text-base">
@@ -120,7 +107,6 @@
             </div>
         </section>
 
-        <!-- Sección Qué es la Ortodoncia -->
         <section class="py-20 lg:py-28 bg-slate-50">
             <div class="container mx-auto px-6 text-center max-w-4xl fade-in-section">
                 <h2 class="text-2xl md:text-4xl font-bold text-slate-800">¿Qué es la Ortodoncia y por qué importa?</h2>
@@ -132,7 +118,6 @@
             </div>
         </section>
 
-        <!-- Sección Servicios -->
         <section id="servicios" class="py-20 lg:py-28 bg-white">
             <div class="container mx-auto px-6 max-w-7xl fade-in-section">
                 <div class="text-center mb-16">
@@ -152,31 +137,30 @@
                         <h3 class="text-xl font-bold text-[#1e293b]">Brackets Cerámicos</h3>
                         <p class="mt-3 text-sm text-slate-600">Tratamiento eficaz con mayor estética que los metálicos.</p>
                         <ul class="mt-4 space-y-2 text-sm">
-                              <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Brackets del color del diente.</li>
-                              <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Visualmente discretos y efectivos.</li>
+                             <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Brackets del color del diente.</li>
+                             <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Visualmente discretos y efectivos.</li>
                         </ul>
                     </div>
                     <div class="bg-slate-50 p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300">
                         <h3 class="text-xl font-bold text-[#1e293b]">Brackets Metálicos</h3>
                         <p class="mt-3 text-sm text-slate-600">La opción más tradicional y efectiva para todo tipo de casos.</p>
                          <ul class="mt-4 space-y-2 text-sm">
-                              <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Resistentes, económicos y confiables.</li>
-                              <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Máxima eficacia en casos complejos.</li>
+                             <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Resistentes, económicos y confiables.</li>
+                             <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Máxima eficacia en casos complejos.</li>
                         </ul>
                     </div>
                     <div class="bg-slate-50 p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300">
                         <h3 class="text-xl font-bold text-[#1e293b]">Ortopedia Infantil</h3>
                         <p class="mt-3 text-sm text-slate-600">Para niños a partir de los 5 años, guiando el desarrollo facial.</p>
                         <ul class="mt-4 space-y-2 text-sm">
-                             <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Corrige problemas óseos a tiempo.</li>
-                             <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Evita tratamientos más largos en el futuro.</li>
+                              <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Corrige problemas óseos a tiempo.</li>
+                              <li class="flex items-start"><svg class="w-5 h-5 mr-2 text-[#039be5] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>Evita tratamientos más largos en el futuro.</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Por qué elegirnos -->
         <section class="py-20 lg:py-28 bg-slate-50">
             <div class="container mx-auto px-6 max-w-7xl fade-in-section">
                 <div class="text-center mb-16">
@@ -215,7 +199,7 @@
                     <div class="flex items-start space-x-4">
                         <div class="bg-teal-100 p-3 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg></div>
                         <div>
-                            <h3 class="text-lg font-semibold text-[#646869]">Resultados visibles</h3>
+                            <h3 class="text-lg font-semibold text-[#1e293b]">Resultados visibles</h3>
                             <p class="mt-1 text-base text-slate-600">Mejora estética y confianza renovada en cada paciente.</p>
                         </div>
                     </div>
@@ -223,7 +207,6 @@
             </div>
         </section>
         
-        <!-- Sección Testimonio Principal -->
         <section class="py-20 lg:py-28 bg-white">
             <div class="container mx-auto px-6 max-w-7xl grid md:grid-cols-5 gap-12 items-center fade-in-section">
                 <div class="md:col-span-2">
@@ -234,14 +217,13 @@
                         <blockquote class="text-sm italic text-slate-700">
                             Camila tenía 9 años y evitaba sonreír por la posición de sus dientes. Tras su tratamiento en SmileCare, hoy sonríe con seguridad y participa feliz en su escuela. Recuperó su confianza… y su sonrisa.</blockquote>
                         <p class="mt-6 font-semibold text-teal-700 text-sm">
-                            — Dra. Sofía P., ortodoncista SmileCare
+                            — Dra. Sofía Paredes, ortodoncista SmileCare
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Testimonios -->
         <section class="py-20 lg:py-28 bg-slate-50">
             <div class="container mx-auto px-6 max-w-7xl fade-in-section">
                 <div class="text-center mb-16">
@@ -257,7 +239,7 @@
                     <div class="bg-white p-8 rounded-xl shadow-md">
                         <p class="text-sm text-slate-600">“Tenía miedo de usar brackets como adulto. Me recomendaron la ortodoncia invisible y fue lo mejor. Cómodo, sin que nadie lo notara y los resultados fueron increíbles.”</p>
                         <p class="mt-6 font-bold text-slate-800 text-sm">— Cristian P.</p>
-                         <p class="text-sm text-teal-600">Paciente de 32 años</p>
+                         <p class="text-sm text-teal-600">Paciente adulto</p>
                     </div>
                     <div class="bg-white p-8 rounded-xl shadow-md">
                         <p class="text-sm text-slate-600">“El ambiente es muy tranquilo. Desde que entras te hacen sentir bienvenido. Mis controles son puntuales y siempre me explican todo con claridad.”</p>
@@ -278,7 +260,6 @@
             </div>
         </section>
         
-        <!-- Sección Proceso -->
         <section class="py-20 lg:py-28 bg-white">
             <div class="container mx-auto px-6 max-w-5xl fade-in-section">
                 <div class="text-center mb-16">
@@ -313,7 +294,6 @@
             </div>
         </section>
 
-        <!-- Sección Preguntas Frecuentes -->
         <section class="py-20 lg:py-28 bg-slate-50">
             <div class="container mx-auto px-6 max-w-4xl fade-in-section">
                 <div class="text-center mb-16">
@@ -322,20 +302,20 @@
                 <div class="space-y-8">
                     <div>
                         <h3 class="text-xl font-semibold text-slate-800">¿A qué edad se puede empezar un tratamiento?</h3>
-                        <p class="mt-2 text-base md:text-lg text-slate-600">La ortopedia puede empezar desde los 5 años.</p>
+                        <p class="mt-2 text-base md:text-lg text-slate-600">La ortopedia puede empezar desde los 5 años para guiar el crecimiento. Para ortodoncia con brackets, se recomienda esperar a que la mayoría de dientes permanentes hayan salido, usualmente entre los 11 y 14 años. No hay edad límite para adultos.</p>
                     </div>
                      <div>
                         <h3 class="text-xl font-semibold text-slate-800">¿Duele ponerse brackets?</h3>
-                        <p class="mt-2 text-base md:text-lg text-slate-600">Es normal sentir algo de presión al inicio o tras ajustes. </div>
+                        <p class="mt-2 text-base md:text-lg text-slate-600">Es normal sentir algo de presión al inicio o tras los ajustes, pero es una molestia temporal que desaparece en pocos días. No es un dolor agudo.</p>
+                    </div>
                      <div>
                         <h3 class="text-xl font-semibold text-slate-800">¿Cuánto dura un tratamiento?</h3>
-                        <p class="mt-2 text-base md:text-lg text-slate-600">En promedio, va de 1 a 3 meses, aunque algunos se resueelven antes.</p>
+                        <p class="mt-2 text-base md:text-lg text-slate-600">En promedio, un tratamiento de ortodoncia dura entre 1 y 3 años, dependiendo de la complejidad del caso y de la colaboración del paciente.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Profesionales -->
         <section id="profesionales" class="py-20 lg:py-28 bg-white">
             <div class="container mx-auto px-6 max-w-7xl fade-in-section">
                 <div class="text-center mb-16">
@@ -371,109 +351,96 @@
             </div>
         </section>
 
-        <!-- Sección Contacto -->
         <section id="contacto" class="py-20 lg:py-28 bg-[#041976] text-white">
-  <div class="container mx-auto px-6 max-w-5xl text-center fade-in-section">
-    <h2 class="text-3xl md:text-5xl font-bold">No postergues más tu sonrisa.</h2>
-    <p class="mt-6 text-base md:text-lg text-teal-100 max-w-2xl mx-auto">
-   Tu nueva sonrisa comienza aquí. Escríbenos y resolvemos tus dudas con confianza y cercanía.
-    </p>
-    <div class="mt-10">
-      <a href="https://wa.me/593981653921" target="_blank" rel="noopener noreferrer" class="bg-white text-[#041976] px-10 py-4 rounded-full font-bold text-base hover:bg-teal-50 transition-all duration-300 shadow-xl inline-flex items-center">
-        <!-- Icono WhatsApp SVG -->
-        <svg class="w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor"><path d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.24-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48
-     c12.682,0,23-10.318,23-23S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804 C15.116,25.235,13,22.463,13,19.594s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022 c-0.196,0.389-0.294,0.632-0.59,0.973s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.59,0.292,0.984,0.438,1.132,0.681C37.062,30.587,37.062,31.755,36.57,33.116z"/>
-   </svg>
-        Agenda tu Cita por WhatsApp
-      </a>
-    </div>
-  </div>
-</section>
+            <div class="container mx-auto px-6 max-w-5xl text-center fade-in-section">
+                <h2 class="text-3xl md:text-5xl font-bold">No postergues más tu sonrisa.</h2>
+                <p class="mt-6 text-base md:text-lg text-teal-100 max-w-2xl mx-auto">
+                Tu nueva sonrisa comienza aquí. Escríbenos y resolvemos tus dudas con confianza y cercanía.
+                </p>
+                <div class="mt-10">
+                    <a href="https://wa.me/593981653921" target="_blank" rel="noopener noreferrer" class="bg-white text-[#041976] px-10 py-4 rounded-full font-bold text-base hover:bg-teal-50 transition-all duration-300 shadow-xl inline-flex items-center">
+                        <svg class="w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" fill="currentColor"><path d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.24-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48
+                    c12.682,0,23-10.318,23-23S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804 C15.116,25.235,13,22.463,13,19.594s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022 c-0.196,0.389-0.294,0.632-0.59,0.973s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.59,0.292,0.984,0.438,1.132,0.681C37.062,30.587,37.062,31.755,36.57,33.116z"/>
+                    </svg>
+                        Agenda tu Cita por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
 
-    
+        
     </main>
-    <!-- Pie de Página -->
     <footer class="bg-slate-800 text-slate-300 text-sm">
-  <div class="container mx-auto px-6 py-12 max-w-7xl">
-    <div class="grid md:grid-cols-4 gap-12">
-      
-      <!-- Marca -->
-      <div>
-        <h3 class="text-lg font-bold text-white">SmileCare</h3>
-        <p class="mt-3">Ortodoncia con tecnología, experiencia y cariño.</p>
-        <p class="mt-1">Transforma tu sonrisa. Transforma tu vida.</p>
-      </div>
+        <div class="container mx-auto px-6 py-12 max-w-7xl">
+            <div class="grid md:grid-cols-4 gap-12">
+            
+            <div>
+                <h3 class="text-lg font-bold text-white">SmileCare</h3>
+                <p class="mt-3">Ortodoncia con tecnología, experiencia y cariño.</p>
+                <p class="mt-1">Transforma tu sonrisa. Transforma tu vida.</p>
+            </div>
 
-      <!-- Navegación -->
-      <div>
-        <h4 class="text-base font-semibold text-white">Navegación</h4>
-        <ul class="mt-4 space-y-2">
-          <li><a href="#servicios" class="hover:text-teal-400 transition-colors">Servicios</a></li>
-          <li><a href="#nosotros" class="hover:text-teal-400 transition-colors">Nosotros</a></li>
-          <li><a href="#profesionales" class="hover:text-teal-400 transition-colors">Profesionales</a></li>
-          <li><a href="#contacto" class="hover:text-teal-400 transition-colors">Contacto</a></li>
-        </ul>
-      </div>
+            <div>
+                <h4 class="text-base font-semibold text-white">Navegación</h4>
+                <ul class="mt-4 space-y-2">
+                <li><a href="#servicios" class="hover:text-teal-400 transition-colors">Servicios</a></li>
+                <li><a href="#nosotros" class="hover:text-teal-400 transition-colors">Nosotros</a></li>
+                <li><a href="#profesionales" class="hover:text-teal-400 transition-colors">Profesionales</a></li>
+                <li><a href="#contacto" class="hover:text-teal-400 transition-colors">Contacto</a></li>
+                </ul>
+            </div>
 
-      <!-- Contacto -->
-      <div>
-        <h4 class="text-base font-semibold text-white">Contacto</h4>
-        <ul class="mt-4 space-y-2">
-          <li class="flex items-start">
-            <svg class="h-4 w-4 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
-            <span>Av. Principal y Calle Secundaria, Quevedo, Ecuador</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
-            <span>(+593) 981-653-921</span>
-          </li>
-          <li class="flex items-start">
-            <svg class="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
-            <span>contacto@smilecare.ec</span>
-          </li>
-        </ul>
-      </div>
+            <div>
+                <h4 class="text-base font-semibold text-white">Contacto</h4>
+                <ul class="mt-4 space-y-2">
+                <li class="flex items-start">
+                    <svg class="h-4 w-4 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                    <span>Av. Principal y Calle Secundaria, Quevedo, Ecuador</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                    <span>(+593) 981-653-921</span>
+                </li>
+                <li class="flex items-start">
+                    <svg class="h-4 w-4 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg>
+                    <span>contacto@smilecare.ec</span>
+                </li>
+                </ul>
+            </div>
 
-      <!-- Redes Sociales -->
-      <div>
-        <h4 class="text-base font-semibold text-white">Síguenos</h4>
-        <div class="flex space-x-4 mt-4">
+            <div>
+                <h4 class="text-base font-semibold text-white">Síguenos</h4>
+                <div class="flex space-x-4 mt-4">
 
-          <!-- Facebook -->
-          <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Facebook">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
-            </svg>
-          </a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Facebook">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                    </svg>
+                </a>
 
-          <!-- Instagram -->
-          <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Instagram">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 50 50">
-              <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z" />
-            </svg>
-          </a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="Instagram">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 50 50">
+                    <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z" />
+                    </svg>
+                </a>
 
-          <!-- TikTok -->
-          <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="TikTok">
-           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-          <path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"/>
-         </svg>
-          </a>
+                <a href="#" class="text-slate-400 hover:text-white transition-colors" aria-label="TikTok">
+                   <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M41,4H9C6.243,4,4,6.243,4,9v32c0,2.757,2.243,5,5,5h32c2.757,0,5-2.243,5-5V9C46,6.243,43.757,4,41,4z M37.006,22.323 c-0.227,0.021-0.457,0.035-0.69,0.035c-2.623,0-4.928-1.349-6.269-3.388c0,5.349,0,11.435,0,11.537c0,4.709-3.818,8.527-8.527,8.527 s-8.527-3.818-8.527-8.527s3.818-8.527,8.527-8.527c0.178,0,0.352,0.016,0.527,0.027v4.202c-0.175-0.021-0.347-0.053-0.527-0.053 c-2.404,0-4.352,1.948-4.352,4.352s1.948,4.352,4.352,4.352s4.527-1.894,4.527-4.298c0-0.095,0.042-19.594,0.042-19.594h4.016 c0.378,3.591,3.277,6.425,6.901,6.685V22.323z"/>
+                   </svg>
+                </a>
 
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Copyright -->
-    <div class="mt-12 border-t border-slate-700 pt-6 text-center text-slate-400">
-      <p>&copy; 2025 SmileCare. Todos los derechos reservados.</p>
-    </div>
-  </div>
-</footer>
-
+        <div class="mt-12 border-t border-slate-700 pt-6 text-center text-slate-400">
+            <p>&copy; 2025 SmileCare. Todos los derechos reservados.</p>
+        </div>
+        </div>
+    </footer>
 
     
-    <!-- Enlace al script externo -->
     <script src="index.js" defer></script>
 </body>
 </html>
