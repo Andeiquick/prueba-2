@@ -57,3 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+// Script para activar las animaciones cuando la sección es visible
+const animatedSection = document.querySelector('.animated-section');
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target); // Dejar de observar después de la primera vez
+        }
+    });
+}, {
+    threshold: 0.3 
+});
+
+// Empieza a observar la sección
+observer.observe(animatedSection);
