@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     
-    // Asegurarse de que los elementos existen antes de añadir listeners
     if (mobileMenuButton && mobileMenu) {
         const navLinks = mobileMenu.querySelectorAll('a');
 
@@ -26,23 +25,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-
-
-    document.addEventListener('DOMContentLoaded', function() {
-
-    // --- LÓGICA DEL MENÚ MÓVIL ---
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-    });
-
-    // --- LÓGICA DE LA ANIMACIÓN DEL BANNER AL HACER SCROLL ---
+    // --- LÓGICA DE ANIMACIÓN DEL BANNER PRINCIPAL ---
     const animatedSection = document.querySelector('.animated-section');
     if (animatedSection) {
-        const observer = new IntersectionObserver((entries) => {
+        const bannerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    bannerObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.4 
+        });
+        bannerObserver.observe(animatedSection);
+    }
+
+    // --- LÓGICA DE ANIMACIÓN PARA SECCIONES (FADE-IN) ---
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+    if (fadeInSections.length > 0) {
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('is-visible');
@@ -50,25 +52,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, {
-            threshold: 0.4
+            threshold: 0.1
         });
-        observer.observe(animatedSection);
+
+        fadeInSections.forEach(section => {
+            sectionObserver.observe(section);
+        });
     }
 
-    // --- LÓGICA DEL ENCABEZADO (HEADER) ---
+    // --- LÓGICA DEL ENCABEZADO (HEADER) AL HACER SCROLL ---
     const header = document.getElementById('header');
-    let lastScrollTop = 0;
-
-    window.addEventListener('scroll', function() {
-        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scroll hacia abajo
-            header.style.top = '-100px';
-        } else {
-            // Scroll hacia arriba
-            header.style.top = '0';
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
-    });
+    if (header) {
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scroll hacia abajo
+                header.style.top = '-100px';
+            } else {
+                // Scroll hacia arriba
+                header.style.top = '0';
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+    }
 });
-
