@@ -20,3 +20,30 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Mejoras visuales para el banner */
+#inicio {
+  background-color: #e0f2f1; /* Fondo ligeramente azulado para dar frescura */
+}
+
+#inicio img {
+  filter: brightness(90%); /* Sutil efecto de contraste */
+}
+
+#inicio .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#inicio h1 {
+  font-family: 'Poppins', sans-serif; /* Tipografía limpia y moderna */
+}
+
+#inicio p {
+  line-height: 1.6; /* Espaciado entre líneas para mayor legibilidad */
+}
+
+#inicio a {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
