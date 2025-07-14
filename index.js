@@ -26,50 +26,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Lógica para la Animación de Scroll ---
-    const sections = document.querySelectorAll('.fade-in-section');
 
-    // Opciones para el Intersection Observer
-    const observerOptions = {
-        root: null, // Observa en relación al viewport
-        rootMargin: '0px',
-        threshold: 0.1 // Se activa cuando el 10% del elemento es visible
-    };
 
-    // Callback que se ejecuta cuando un elemento observado entra o sale del viewport
-    const observerCallback = (entries, observer) => {
-        entries.forEach(entry => {
-            // Si el elemento está intersectando (visible)
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Opcional: deja de observar el elemento una vez que la animación ha ocurrido
-                // observer.unobserve(entry.target); 
-            }
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+    // --- LÓGICA DEL MENÚ MÓVIL ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // --- LÓGICA DE LA ANIMACIÓN DEL BANNER AL HACER SCROLL ---
+    const animatedSection = document.querySelector('.animated-section');
+    if (animatedSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.4
         });
-    };
+        observer.observe(animatedSection);
+    }
 
-    // Crear una nueva instancia del Intersection Observer
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    // --- LÓGICA DEL ENCABEZADO (HEADER) ---
+    const header = document.getElementById('header');
+    let lastScrollTop = 0;
 
-    // Observar cada una de las secciones
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-});
-// Script para activar las animaciones cuando la sección es visible
-const animatedSection = document.querySelector('.animated-section');
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target); // Dejar de observar después de la primera vez
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scroll hacia abajo
+            header.style.top = '-100px';
+        } else {
+            // Scroll hacia arriba
+            header.style.top = '0';
         }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     });
-}, {
-    threshold: 0.3 
 });
 
-// Empieza a observar la sección
-observer.observe(animatedSection);
