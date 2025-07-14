@@ -20,20 +20,20 @@
 
 <body class="bg-white text-slate-700">
 
-    <!-- Encabezado -->
-    <header id="header" class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+   <!-- Encabezado -->
+    <header id="header" class="bg-white/90 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm transition-all duration-300">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center max-w-7xl">
-            <a href="#inicio" class="text-2xl font-bold text-teal-600">
+            <a href="#inicio" class="text-2xl font-bold text-slate-800">
                 SmileCare
             </a>
             
             <!-- Menú de navegación para escritorio -->
-            <div class="hidden md:flex space-x-6 items-center text-sm">
-                <a href="#inicio" class="text-blue-600 hover:text-blue-600 transition-colors duration-300">Inicio</a>
-                <a href="#servicios" class="text-slate-600 hover:text-blue-600 transition-colors duration-300">Servicios</a>
-                <a href="#nosotros" class="text-slate-600 hover:text-blue-600 transition-colors duration-300">Nosotros</a>
-                <a href="#profesionales" class="text-slate-600 hover:text-blue-600 transition-colors duration-300">Especialistas</a>
-             <a href="#contacto" class="bg-[#ea8c04] text-white px-4 py-1.5 rounded-full font-medium hover:bg-[#d64d00] transition-all duration-300 shadow-sm text-sm">
+            <div class="hidden md:flex space-x-8 items-center text-sm font-medium">
+                <a href="#inicio" class="text-teal-600 hover:text-teal-500 transition-colors duration-300">Inicio</a>
+                <a href="#servicios" class="text-slate-600 hover:text-teal-600 transition-colors duration-300">Servicios</a>
+                <a href="#nosotros" class="text-slate-600 hover:text-teal-600 transition-colors duration-300">Nosotros</a>
+                <a href="#profesionales" class="text-slate-600 hover:text-teal-600 transition-colors duration-300">Especialistas</a>
+                <a href="#contacto" class="bg-[#f59100] text-white px-5 py-2 rounded-full hover:bg-[#dd7e00] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
                     Agendar Cita
                 </a>
             </div>
@@ -49,52 +49,48 @@
         </nav>
 
         <!-- Menú desplegable móvil -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#inicio" class="block py-3 px-6 text-slate-600 hover:bg-teal-50 hover:text-teal-600 text-base">Inicio</a>
             <a href="#servicios" class="block py-3 px-6 text-slate-600 hover:bg-teal-50 hover:text-teal-600 text-base">Servicios</a>
             <a href="#nosotros" class="block py-3 px-6 text-slate-600 hover:bg-teal-50 hover:text-teal-600 text-base">Nosotros</a>
             <a href="#profesionales" class="block py-3 px-6 text-slate-600 hover:bg-teal-50 hover:text-teal-600 text-base">Especialistas</a>
-            <a href="#contacto" class="block py-4 px-6 text-center bg-[#14978b] text-white font-semibold hover:bg-[#117c73] text-base"> Agendar Cita</a>
+            <a href="#contacto" class="block py-4 px-6 text-center bg-teal-500 text-white font-semibold hover:bg-teal-600 text-base">Agendar Cita</a>
         </div>
     </header>
 
     <!-- Contenido Principal -->
     <main>
+        <!-- Sección de Inicio (Nuevo Banner) -->
+        <section id="inicio" class="animated-section relative h-screen w-full overflow-hidden bg-white grid lg:grid-cols-3">
+            <!-- Panel Izquierdo (Imagen) -->
+            <div class="left-panel absolute lg:relative w-full h-full lg:w-auto">
+                <img src="https://images.pexels.com/photos/3789888/pexels-photo-3789888.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Detalle de una sonrisa saludable" class="w-full h-full object-cover">
+            </div>
 
-        <!-- Sección de Inicio -->
-        <section class="animated-section relative h-screen overflow-hidden flex items-center justify-center text-center">
-        <!-- Imagen de Fondo con animación -->
-        <div class="absolute inset-0 z-0">
-            <img 
-                src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-                alt="Retrato profesional de una mujer con una sonrisa perfecta" 
-                class="object-cover w-full h-full animate-ken-burns"
-                onerror="this.onerror=null;this.src='https://placehold.co/1920x1080/1e293b/e0f2f1?text=Sonrisa+Perfecta';"
-            >
-        </div>
-        
-        <!-- Capa de gradiente para legibilidad del texto -->
-        <div class="absolute inset-0 z-10 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent"></div>
+            <!-- Panel Central (Contenido) -->
+            <div class="center-content relative z-10 flex flex-col items-center justify-center text-center p-8 bg-white/80 lg:bg-white backdrop-blur-sm lg:backdrop-blur-none">
+                <div class="overflow-hidden">
+                    <h1 class="content-item text-4xl sm:text-5xl font-bold text-slate-800 !leading-tight">
+                        La sonrisa que siempre deseaste.
+                    </h1>
+                </div>
+                <div class="overflow-hidden mt-4">
+                    <p class="content-item delay-1 text-lg text-slate-600">
+                        Diseñamos sonrisas. Creamos confianza.
+                    </p>
+                </div>
+                <div class="overflow-hidden mt-8">
+                    <a href="https://wa.me/593981653921" class="content-item delay-2 inline-block bg-[#f59100] text-white px-10 py-4 rounded-full font-bold text-base hover:bg-[#dd7e00] transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Agendar Cita
+                    </a>
+                </div>
+            </div>
 
-        <!-- Contenido de Texto -->
-        <div class="relative z-20 px-6 text-white max-w-3xl">
-            <div class="overflow-hidden">
-                <h2 class="fade-in-up-item text-4xl sm:text-5xl lg:text-6xl font-bold !leading-tight text-shadow-lg">
-                    La sonrisa que siempre deseaste.
-                </h2>
+            <!-- Panel Derecho (Imagen) -->
+            <div class="right-panel hidden lg:block">
+                 <img src="https://images.pexels.com/photos/5252277/pexels-photo-5252277.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mujer joven sonriendo con seguridad" class="w-full h-full object-cover">
             </div>
-            <div class="overflow-hidden mt-6">
-                <p class="fade-in-up-item delay-300 sm:text-xl text-slate-200">
-                   Diseñamos sonrisas. Creamos confianza.
-                </p>
-            </div>
-            <div class="overflow-hidden mt-10">
-                 <a href="https://wa.me/593981653921" 
-                   class="fade-in-up-item delay-500 inline-block bg-[#f59100] text-white px-10 py-4 rounded-full font-bold text-base hover:bg-[#dd7e00] transition-all duration-300 transform hover:scale-105 shadow-2xl">
-                    Agendar Cita
-                </a>
-            </div>
-        </div>
-    </section>
+        </section>
 
         <!-- Sección Nosotros -->
         <section id="nosotros" class="py-20 lg:py-28 bg-white">
